@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vajra Aviation classroom facilities - Modern, well-equipped training rooms for aviation students in Bangalore." />
+  <title>Class Room | Vajra Aviation Private Limited</title>
+
+  
+  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-logo.png?v=1" />
+  <link rel="apple-touch-icon" href="images/favicon-logo.png?v=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="canonical" href="https://vajraaviation.com/facility-classroom" />
+  <meta property="og:title" content="Classroom Facilities | Vajra Aviation Bangalore" />
+  <meta property="og:description" content="State-of-the-art aviation training classrooms at Vajra Aviation, Bangalore. AC lecture halls, computer labs and aviation library." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vajraaviation.com/facility-classroom" />
+  <meta property="og:image" content="https://vajraaviation.com/images/logo.png?v=3" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Classroom Facilities - Vajra Aviation","url":"https://vajraaviation.com/facility-classroom","description":"Modern aviation training classrooms, computer labs and library at Vajra Aviation, Bangalore.","provider":{"@type":"EducationalOrganization","name":"Vajra Aviation Private Limited","url":"https://vajraaviation.com"}}
+  </script>
+  <link rel="stylesheet" href="styles/main.css?v=6" />
+
+  <style>
+    /* ===== GALLERY ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 29, 54, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-overlay i {
+      font-size: 28px;
+      color: #fff;
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-prev:hover,
+    .lightbox-next:hover { background: rgba(255,255,255,0.3); }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+
+    /* ===== STATS BANNER ===== */
+    .classroom-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 40px 32px;
+      margin: 48px 0 0;
+    }
+    .stat-item {
+      text-align: center;
+      color: #fff;
+    }
+    .stat-num {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .stat-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      opacity: 0.85;
+    }
+
+    /* ===== LOCATION GRID ===== */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .map-embed {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      height: 320px;
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .map-placeholder {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* ===== FEATURE HIGHLIGHTS (icon + text row) ===== */
+    .highlight-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .highlight-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--light-gray);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .highlight-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .highlight-icon i {
+      color: var(--gold);
+      font-size: 18px;
+    }
+    .highlight-text h5 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .highlight-text p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ===== MODERN FEATURE CARDS ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 28px 32px;
+      border: 1px solid var(--light-gray);
+      box-shadow: 0 4px 20px rgba(11,45,82,0.07);
+      transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .feature-card:hover {
+      box-shadow: 0 16px 48px rgba(11,45,82,0.15);
+      transform: translateY(-8px);
+      border-color: rgba(200,148,58,0.2);
+    }
+    .feature-card:hover::before { transform: scaleX(1); }
+    .feature-card-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: rgba(200,148,58,0.5);
+      margin-bottom: 20px;
+    }
+    .feature-card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 24px rgba(11,45,82,0.25);
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover .feature-card-icon { transform: scale(1.08) rotate(-4deg); }
+    .feature-card-icon i {
+      font-size: 26px;
+      color: var(--gold-light);
+    }
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 960px) {
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .classroom-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 28px 20px; }
+    }
+    @media (max-width: 768px) {
+      .location-grid { grid-template-columns: 1fr; }
+      .highlight-row { grid-template-columns: 1fr; }
+      .map-embed { height: 260px; }
+    }
+    @media (max-width: 560px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .classroom-stats { grid-template-columns: repeat(2, 1fr); }
+      .stat-num { font-size: 32px; }
+      .feature-card { padding: 28px 20px 24px; }
+    }
+    @media (max-width: 380px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@vajraaviation.com"><i class="fas fa-envelope"></i> info@vajraaviation.com</a>
+      <span class="top-bar-sep">|</span>
+      <a href="tel:+916364919234"><i class="fas fa-phone"></i> 6364919234 &nbsp;|&nbsp; 8111086614 &nbsp;|&nbsp; 9840920090</a>
+      <span class="top-bar-sep">|</span>
+      <span><i class="fas fa-clock" style="color:var(--gold)"></i> Mon–Sat: 9AM–6PM</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <img src="images/logo.png?v=3" alt="Vajra Aviation Logo" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+        <div class="logo-text">
+          <span class="brand-name">VAJRA</span>
+          <span class="brand-sub">Aviation Private Limited</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="courses" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-dropdown">
+            <div style="grid-column:1; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Commercial Pilot Training</div>
+              <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+              <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+              <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+              <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+            </div>
+            <div style="grid-column:2; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Aircraft Maintenance Engineering</div>
+              <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+              <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+              <a href="course-graduate-engineering"><i class="fas fa-graduation-cap"></i> Graduate Engineering</a>
+            </div>
+            <div style="grid-column:3; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Aviation Personnel</div>
+              <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+              <a href="course-ground-staff"><i class="fas fa-luggage-cart"></i> Ground Staff</a>
+              <a href="course-airline-ticketing"><i class="fas fa-ticket-alt"></i> Airline Ticketing</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about" class="nav-link">About Us</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Facility <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown">
+            <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+            <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="placements" class="nav-link">Placements</a></li>
+        <li class="nav-item"><a href="faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <a href="contact" class="btn btn-gold nav-cta">
+        <i class="fas fa-paper-plane"></i> Enquire Now
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo">
+      <img src="images/logo.png?v=3" alt="Vajra Aviation" class="logo-img" style="height:38px;" onerror="this.style.display='none'" />
+      <div class="logo-text">
+        <span class="brand-name" style="font-size:16px;">VAJRA</span>
+        <span class="brand-sub">Aviation Pvt Ltd</span>
+      </div>
+    </a>
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="courses" class="mobile-nav-link" data-submenu="coursesSub">Courses <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="coursesSub">
+      <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+      <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+      <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+      <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+      <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+      <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+      <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+    </div>
+    <a href="about" class="mobile-nav-link">About Us</a>
+    <a class="mobile-nav-link" data-submenu="facilitySub">Facility <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="facilitySub">
+      <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+      <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+    </div>
+    <a href="placements" class="mobile-nav-link">Placements</a>
+    <a href="faq" class="mobile-nav-link">FAQ</a>
+    <a href="contact" class="mobile-nav-link">Contact Us</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-contact-item"><i class="fas fa-phone"></i><span>6364919234 / 8111086614</span></div>
+    <div class="mobile-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+    <div class="mobile-contact-item"><i class="fas fa-map-marker-alt"></i><span>Amrutha Nagar, Bangalore - 560092</span></div>
+    <a href="contact" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:16px;">
+      <i class="fas fa-paper-plane"></i> Enquire Now
+    </a>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <h1>Class Room</h1>
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Facility</span>
+        <i class="fas fa-chevron-right"></i>
+        <span>Class Room</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLASSROOM INTRO ===== -->
+<section class="section-pad" style="background: var(--white);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap fade-in-left">
+        <img loading="lazy"
+          src="images/classroom-main.jpg"
+          alt="Vajra Aviation Modern Classroom"
+          style="width:100%;height:100%;object-fit:cover;border-radius:12px;"
+          onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&q=80'" />
+        <div class="about-badge">
+          <div class="number" style="font-size:20px;">Modern</div>
+          <div class="label">Facilities</div>
+        </div>
+      </div>
+      <div class="about-content fade-in-right">
+        <div class="section-header" style="text-align:left;">
+          <span class="section-label">Our Facilities</span>
+          <h2 class="section-title">State-of-the-Art<br /><span>Classrooms</span></h2>
+          <div class="section-divider" style="margin: 16px 0 0;"></div>
+        </div>
+        <p class="about-text">
+          At Vajra Aviation, we believe that the learning environment plays a crucial role in student success. Our classrooms are designed to provide the optimal learning experience for aviation students, combining modern technology with comfortable, focused study spaces.
+        </p>
+        <p class="about-text">
+          Our training facility is located at NO.95, Third Floor, G R Arcade, Sector - C, Amrutha Nagar, Amruthalli, Bangalore. The facility is easily accessible and fully equipped with everything needed for comprehensive aviation training.
+        </p>
+
+        <div class="highlight-row">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-tv"></i></div>
+            <div class="highlight-text">
+              <h5>Smart Boards</h5>
+              <p>Interactive digital displays for engaging lessons</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-wifi"></i></div>
+            <div class="highlight-text">
+              <h5>High-Speed Wi-Fi</h5>
+              <p>Seamless connectivity throughout the campus</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-snowflake"></i></div>
+            <div class="highlight-text">
+              <h5>Air Conditioned</h5>
+              <p>Comfortable environment for focused learning</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-book"></i></div>
+            <div class="highlight-text">
+              <h5>Study Materials</h5>
+              <p>DGCA & EASA approved comprehensive resources</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="classroom-stats fade-in">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Lecture Halls</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Seats Per Batch</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">Books in Library</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">AC &amp; Wi-Fi Enabled</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACILITIES FEATURES ===== -->
+<section class="section-pad" style="background: var(--light-gray);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">What We Provide</span>
+      <h2 class="section-title">Classroom <span>Features</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Our classrooms are equipped with the latest technology and resources to ensure an effective and engaging learning experience.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-card-num">01</div>
+        <div class="feature-card-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Digital Learning Tools</h3>
+        <p>Smart boards, projectors, and digital displays for interactive learning. Students have access to online study materials, practice tests, and live aviation databases.</p>
+      </div>
+      <div class="feature-card fade-in delay-1">
+        <div class="feature-card-num">02</div>
+        <div class="feature-card-icon"><i class="fas fa-chair"></i></div>
+        <h3>Ergonomic Seating</h3>
+        <p>Comfortable, ergonomically designed seating arrangements that promote focus and reduce fatigue during long study sessions with optimal desk space for all materials.</p>
+      </div>
+      <div class="feature-card fade-in delay-2">
+        <div class="feature-card-num">03</div>
+        <div class="feature-card-icon"><i class="fas fa-volume-up"></i></div>
+        <h3>Audio-Visual Systems</h3>
+        <p>High-quality audio systems for clear instruction delivery. Video playback capabilities for aviation training films, ATC recordings, and simulation videos.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-card-num">04</div>
+        <div class="feature-card-icon"><i class="fas fa-book-reader"></i></div>
+        <h3>Library &amp; Study Area</h3>
+        <p>Dedicated library with 1000+ aviation textbooks, DGCA study materials, EASA manuals, and reference books. Quiet study zones for focused exam preparation.</p>
+      </div>
+      <div class="feature-card fade-in delay-1">
+        <div class="feature-card-num">05</div>
+        <div class="feature-card-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Computer Lab</h3>
+        <p>Computer lab with aviation software, flight planning tools, and online examination practice platforms for DGCA and EASA mock tests in a real exam environment.</p>
+      </div>
+      <div class="feature-card fade-in delay-2">
+        <div class="feature-card-num">06</div>
+        <div class="feature-card-icon"><i class="fas fa-users"></i></div>
+        <h3>Small Batch Sizes</h3>
+        <p>We maintain small batches to ensure personalised attention for every student, allowing instructors to address individual learning needs with focused, direct guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section-pad" style="background: var(--white);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Photo Gallery</span>
+      <h2 class="section-title">Our <span>Facility Gallery</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Take a virtual tour of our modern training facilities at Vajra Aviation.</p>
+    </div>
+
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img loading="lazy"
+          src="images/gallery-classroom-1.jpg"
+          alt="Vajra Aviation Classroom"
+          onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80'" />
+        <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img loading="lazy"
+          src="images/gallery-classroom-2.jpg"
+          alt="Lecture Hall"
+          onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80'" />
+        <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img loading="lazy"
+          src="images/gallery-classroom-3.jpg"
+          alt="Study Area"
+          onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'" />
+        <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img loading="lazy"
+          src="images/gallery-classroom-4.jpg"
+          alt="Computer Lab"
+          onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80'" />
+        <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img loading="lazy"
+          src="images/gallery-classroom-5.jpg"
+          alt="Aviation Library"
+          onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80'" />
+        <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img loading="lazy"
+          src="images/gallery-classroom-6.jpg"
+          alt="Training Session"
+          onerror="this.src='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80'" />
+        <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">&times;</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)"><i class="fas fa-chevron-left"></i></button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Gallery Image" />
+  <button class="lightbox-next" onclick="lightboxNav(1)"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- ===== LOCATION ===== -->
+<section class="section-pad" style="background: var(--light-gray);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Our <span>Location</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="location-grid fade-in">
+      <div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-item-text">
+            <h4>Address</h4>
+            <p>NO.95, Third Floor, G R Arcade, Sector - C, Amrutha Nagar, Amruthalli, Bangalore, Karnataka - 560092</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-item-text">
+            <h4>Phone</h4>
+            <p>6364919234 &nbsp;|&nbsp; 8111086614 &nbsp;|&nbsp; 9840920090</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div class="contact-item-text">
+            <h4>Working Hours</h4>
+            <p>Monday – Saturday: 9:00 AM – 6:00 PM<br />Sunday: By Appointment</p>
+          </div>
+        </div>
+        <a href="contact" class="btn btn-navy" style="margin-top: 16px;">
+          Schedule a Campus Visit <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.659852710631!2d77.59574857507796!3d13.057310087265984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae198c612563a1%3A0x362ed06a288f7ae!2sVAJRA%20AVIATION%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1773147453007!5m2!1sen!2sin"
+          width="600" height="450"
+          style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Vajra Aviation Private Limited Location">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text fade-in-left">
+        <h2>Visit Our World-Class Training Facility</h2>
+        <p>Schedule a campus visit and experience our state-of-the-art facilities in person.</p>
+      </div>
+      <div class="fade-in-right">
+        <a href="contact" class="btn btn-outline-white" style="font-size:15px;padding:16px 40px;">
+          Schedule Visit <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="images/logo-footer.png" alt="Vajra Aviation" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+          <div class="logo-text">
+            <span class="brand-name">VAJRA</span>
+            <span class="brand-sub">Aviation Private Limited</span>
+          </div>
+        </a>
+        <p class="footer-desc">Vajra Aviation Private Limited — Bangalore's premier aviation training institute founded by Ex-IAF officers. ISO 9001:2015 certified. Shaping the next generation of aviation professionals since 2014.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a></li>
+          <li><a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a></li>
+          <li><a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a></li>
+          <li><a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a></li>
+          <li><a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew Training</a></li>
+          <li><a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a></li>
+          <li><a href="courses"><i class="fas fa-th-list"></i> View All Courses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Our Faculty</a></li>
+          <li><a href="placements"><i class="fas fa-briefcase"></i> Placements</a></li>
+          <li><a href="blog"><i class="fas fa-blog"></i> Blog &amp; Articles</a></li>
+          <li><a href="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <li><a href="contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+916364919234">6364919234 (Admissions)</a></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/918111086614" target="_blank">8111086614 (WhatsApp)</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919840920090">9840920090</a></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>NO.95, Third Floor, G R Arcade, Sector-C, Amrutha Nagar, Amruthalli, Bangalore – 560092</span></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+        <div style="margin-top:16px;">
+          <h4 class="footer-heading">Our Partners</h4>
+          <ul class="footer-links">
+            <li><a href="https://aviotrace.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> Aviotrace Swiss</a></li>
+            <li><a href="https://www.ianzl.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> IANZL – New Zealand</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vajra Aviation Private Limited. All Rights Reserved. | ISO 9001:2015 Certified</p>
+      <div class="footer-bottom-links">
+        <a href="privacy">Privacy Policy</a>
+        <a href="contact">Contact</a>
+        <a href="sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  <a href="https://wa.me/918111086614?text=Hi%2C%20I%20want%20to%20know%20more%20about%20aviation%20courses%20at%20Vajra%20Aviation." target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/main.js" defer></script>
+<script>
+  // ===== GALLERY LIGHTBOX =====
+  var galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
+  var currentIndex = 0;
+
+  function openLightbox(idx) {
+    currentIndex = idx;
+    var img = galleryImages[idx];
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxImg').alt = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) {
+      closeLightboxBtn();
+    }
+  }
+
+  function closeLightboxBtn() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function lightboxNav(dir) {
+    currentIndex = (currentIndex + dir + galleryImages.length) % galleryImages.length;
+    var img = galleryImages[currentIndex];
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxImg').alt = img.alt;
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightboxBtn();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+# ============================================================
+# VAJRA AVIATION - Hostinger / LiteSpeed .htaccess
+# ============================================================
+
+RewriteEngine On
+
+# Force index.html before index.php (prevents WordPress from intercepting homepage)
+DirectoryIndex index.html index.php
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www (canonical domain)
+RewriteCond %{HTTP_HOST} ^www\.vajraaviation\.com [NC]
+RewriteRule ^(.*)$ https://vajraaviation.com/$1 [L,R=301]
+
+# ── LITESPEED CACHE CONTROL ────────────────────────────────
+<IfModule LiteSpeed>
+  RewriteRule .* - [E=Cache-Control:no-cache]
+</IfModule>
+
+# ── CLEAN URLs (remove .html extension) ────────────────────
+# Redirect .html requests to clean URL (301 permanent)
+RewriteCond %{THE_REQUEST} \s/+(.*?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally serve the .html file for clean URL requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Old faculty/classroom URLs (keep working)
+RewriteRule ^faculty$ /facility-faculty [R=301,L]
+RewriteRule ^classroom$ /facility-classroom [R=301,L]
+
+# ── COMPRESSION (Gzip) ─────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ── BROWSER CACHING ────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML - 1 hour (so updates show quickly)
+  ExpiresByType text/html                  "access plus 1 hour"
+
+  # CSS + JS - 1 year (filenames include version via ?v= or are static)
+  ExpiresByType text/css                   "access plus 1 year"
+  ExpiresByType application/javascript     "access plus 1 year"
+
+  # Images - 1 year
+  ExpiresByType image/png                  "access plus 1 year"
+  ExpiresByType image/jpeg                 "access plus 1 year"
+  ExpiresByType image/webp                 "access plus 1 year"
+  ExpiresByType image/svg+xml              "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
+
+  # Fonts - 1 year
+  ExpiresByType font/woff2                 "access plus 1 year"
+  ExpiresByType font/woff                  "access plus 1 year"
+</IfModule>
+
+# ── SECURITY HEADERS ───────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Cache-Control for static assets
+  <FilesMatch "\.(css|js|png|jpg|jpeg|webp|svg|ico|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Cache-Control for HTML - no CDN caching, always fresh
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# ── HOTLINK PROTECTION ─────────────────────────────────────
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?vajraaviation\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+
+# ── ERROR PAGES ────────────────────────────────────────────
+ErrorDocument 404 /index.html

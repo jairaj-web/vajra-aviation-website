@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aviation Courses in Bangalore at Vajra Aviation — CPL, ATPL, EASA Part 66, Flight Dispatcher, Cabin Crew, DGCA AME, Ground Staff, Airline Ticketing and more. Taught by Ex-IAF Officers." />
+  <meta name="keywords" content="aviation courses Bangalore, CPL training India, EASA Part 66 Bangalore, cabin crew training, flight dispatcher DGCA, ATPL ground school, DGCA AME training" />
+  <title>Aviation Courses in Bangalore | Vajra Aviation</title>
+  
+  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-logo.png?v=1" />
+  <link rel="apple-touch-icon" href="images/favicon-logo.png?v=1" />
+  <!-- Preconnect for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <!-- Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
+  <!-- Font Awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="canonical" href="https://vajraaviation.com/courses.html" />
+  <link rel="stylesheet" href="styles/main.css?v=6" />
+  <meta property="og:title" content="Aviation Courses in Bangalore | Vajra Aviation" />
+  <meta property="og:description" content="11 aviation courses taught by Ex-IAF officers. CPL, ATPL, EASA Part 66, Cabin Crew, Flight Dispatcher and more. ISO 9001:2015 certified institute." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vajraaviation.com/courses.html" />
+
+  <meta property="og:image" content="https://vajraaviation.com/images/logo.png?v=3" />
+
+  <style>
+    /* ── COURSE FILTER NAV ── */
+    .course-filter-nav {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .course-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border: 2px solid var(--light-gray);
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-body);
+      background: var(--white);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .course-filter-btn:hover,
+    .course-filter-btn.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .course-filter-btn i { font-size: 14px; color: var(--gold); }
+    .course-filter-btn:hover i,
+    .course-filter-btn.active i { color: var(--gold-light); }
+
+    /* ── TRACK SECTION HEADER ── */
+    .track-section-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      padding-bottom: 16px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .track-section-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: var(--gold-light);
+      flex-shrink: 0;
+    }
+    .track-section-title h2 { font-size: 26px; font-weight: 800; color: var(--navy); margin: 0; }
+    .track-section-title p { font-size: 13px; color: var(--gray); margin: 0; }
+
+    /* ── DETAILED COURSE CARD ── */
+    .course-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .course-detail-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--light-gray);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+    .course-detail-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-6px);
+      border-color: rgba(200,148,58,0.25);
+    }
+    .course-detail-header {
+      padding: 28px;
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+    .course-detail-header::after {
+      content: '';
+      position: absolute;
+      right: -40px; bottom: -40px;
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .cdc-icon {
+      width: 56px; height: 56px;
+      background: rgba(200,148,58,0.15);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: var(--gold-light);
+      flex-shrink: 0;
+      border: 1px solid rgba(200,148,58,0.25);
+    }
+    .cdc-title-wrap { flex: 1; }
+    .cdc-category {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .cdc-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .course-detail-body { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; }
+    .cdc-desc { font-size: 14.5px; color: var(--gray); line-height: 1.75; margin-bottom: 20px; flex: 1; }
+    .cdc-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .cdc-hl-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-body);
+    }
+    .cdc-hl-item i { color: var(--gold); font-size: 12px; flex-shrink: 0; }
+    .cdc-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--light-gray);
+    }
+    .cdc-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+    .cdc-meta-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12.5px; color: var(--gray);
+    }
+    .cdc-meta-item i { color: var(--gold); font-size: 11px; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--navy);
+      padding: 32px 0;
+    }
+    .stats-strip .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .strip-stat {
+      text-align: center;
+      color: var(--white);
+    }
+    .strip-stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .strip-stat-label {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+    }
+    .strip-sep { width: 1px; height: 50px; background: rgba(255,255,255,0.12); }
+
+    @media (max-width: 900px) { .course-detail-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .cdc-highlights { grid-template-columns: 1fr; } .strip-sep { display: none; } }
+  </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@vajraaviation.com"><i class="fas fa-envelope"></i> info@vajraaviation.com</a>
+      <span class="top-bar-sep">|</span>
+      <a href="tel:+916364919234"><i class="fas fa-phone"></i> 6364919234 &nbsp;|&nbsp; 8111086614 &nbsp;|&nbsp; 9840920090</a>
+      <span class="top-bar-sep">|</span>
+      <span><i class="fas fa-clock" style="color:var(--gold)"></i> Mon–Sat: 9AM–6PM</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <img src="images/logo.png?v=3" alt="Vajra Aviation Logo" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+        <div class="logo-text">
+          <span class="brand-name">VAJRA</span>
+          <span class="brand-sub">Aviation Private Limited</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="courses" class="nav-link active">Courses <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-dropdown">
+            <div style="grid-column:1; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Commercial Pilot Training</div>
+              <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+              <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+              <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+              <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+            </div>
+            <div style="grid-column:2; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Aircraft Maintenance Engineering</div>
+              <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+              <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+              <a href="course-graduate-engineering"><i class="fas fa-graduation-cap"></i> Graduate Engineering</a>
+            </div>
+            <div style="grid-column:3; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Aviation Personnel</div>
+              <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+              <a href="course-ground-staff"><i class="fas fa-luggage-cart"></i> Ground Staff</a>
+              <a href="course-airline-ticketing"><i class="fas fa-ticket-alt"></i> Airline Ticketing</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about" class="nav-link">About Us</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Facility <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown">
+            <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+            <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="placements" class="nav-link">Placements</a></li>
+        <li class="nav-item"><a href="faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <a href="contact" class="btn btn-gold nav-cta">
+        <i class="fas fa-paper-plane"></i> Enquire Now
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo">
+      <img src="images/logo.png?v=3" alt="Vajra Aviation" class="logo-img" style="height:38px;" onerror="this.style.display='none'" />
+      <div class="logo-text">
+        <span class="brand-name" style="font-size:16px;">VAJRA</span>
+        <span class="brand-sub">Aviation Pvt Ltd</span>
+      </div>
+    </a>
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="courses" class="mobile-nav-link active" data-submenu="coursesSub">Courses <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="coursesSub">
+      <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+      <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+      <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+      <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+      <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+      <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+      <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+    </div>
+    <a href="about" class="mobile-nav-link">About Us</a>
+    <a class="mobile-nav-link" data-submenu="facilitySub">Facility <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="facilitySub">
+      <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+      <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+    </div>
+    <a href="placements" class="mobile-nav-link">Placements</a>
+    <a href="faq" class="mobile-nav-link">FAQ</a>
+    <a href="contact" class="mobile-nav-link">Contact Us</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-contact-item"><i class="fas fa-phone"></i><span>6364919234 / 8111086614</span></div>
+    <div class="mobile-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+    <div class="mobile-contact-item"><i class="fas fa-map-marker-alt"></i><span>Amrutha Nagar, Bangalore - 560092</span></div>
+    <a href="contact" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:16px;">
+      <i class="fas fa-paper-plane"></i> Enquire Now
+    </a>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero-label"><i class="fas fa-graduation-cap"></i> 11 Comprehensive Programs</span>
+    <h1>Aviation Courses in <span>Bangalore</span></h1>
+    <p>From CPL and ATPL pilot ground training to EASA Part 66 engineering and cabin crew — Vajra Aviation offers 11 industry-leading courses taught by Ex-IAF veterans.</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Courses</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-item"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fas fa-fighter-jet"></i> Ex-IAF Faculty</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fas fa-globe"></i> EASA Partner – Aviotrace Swiss</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fas fa-briefcase"></i> 95%+ Placement Rate</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fas fa-book-open"></i> 11 Courses Available</div>
+  </div>
+</div>
+
+<!-- ===== INTRO ===== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">All Programs</span>
+      <h2 class="section-title">Choose Your <span>Aviation Path</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Vajra Aviation offers 11 comprehensive aviation programs across three tracks — Commercial Pilot Training, AME Engineering, and Aviation Personnel. Every course is designed around DGCA and international standards, delivered by decorated Ex-IAF instructors who bring military discipline and real-world expertise to the classroom.</p>
+    </div>
+
+    <!-- Track Overview Cards -->
+    <div class="tracks-grid fade-in">
+      <div class="track-card">
+        <div class="track-icon"><i class="fas fa-plane-departure"></i></div>
+        <h3>Commercial Pilot Training</h3>
+        <p>DGCA-aligned ground school programs for pilots, flight dispatchers and radio telephony professionals seeking licensing and career progression.</p>
+        <div class="track-courses">
+          <span class="track-badge">CPL</span>
+          <span class="track-badge">ATPL</span>
+          <span class="track-badge">Flight Dispatcher</span>
+          <span class="track-badge">Radio Telephony</span>
+        </div>
+        <a href="#pilot" class="btn btn-navy btn-sm">View Courses <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="track-card">
+        <div class="track-icon"><i class="fas fa-tools"></i></div>
+        <h3>Aircraft Maintenance Engineering</h3>
+        <p>EASA Part 66 and DGCA AME examination training programs for aircraft maintenance engineers, with global certification pathways via Aviotrace Swiss.</p>
+        <div class="track-courses">
+          <span class="track-badge">EASA Part 66</span>
+          <span class="track-badge">DGCA AME</span>
+          <span class="track-badge">Grad Engineering</span>
+        </div>
+        <a href="#ame" class="btn btn-navy btn-sm">View Courses <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="track-card">
+        <div class="track-icon"><i class="fas fa-user-tie"></i></div>
+        <h3>Aviation Personnel</h3>
+        <p>Front-line aviation career training for cabin crew, ground staff, airline ticketing professionals and cargo handling specialists at India's top airports.</p>
+        <div class="track-courses">
+          <span class="track-badge">Cabin Crew</span>
+          <span class="track-badge">Ground Staff</span>
+          <span class="track-badge">Airline Ticketing</span>
+          <span class="track-badge">Cargo Handling</span>
+        </div>
+        <a href="#personnel" class="btn btn-navy btn-sm">View Courses <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Filter Nav -->
+    <div class="course-filter-nav fade-in">
+      <a href="#pilot" class="course-filter-btn"><i class="fas fa-plane-departure"></i> Commercial Pilot Training</a>
+      <a href="#ame" class="course-filter-btn"><i class="fas fa-tools"></i> Aircraft Maintenance Engineering</a>
+      <a href="#personnel" class="course-filter-btn"><i class="fas fa-user-tie"></i> Aviation Personnel</a>
+      <a href="contact" class="course-filter-btn" style="background:var(--gold); color:var(--white); border-color:var(--gold);"><i class="fas fa-paper-plane"></i> Enquire Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PILOT TRAINING TRACK ===== -->
+<section id="pilot" class="section-pad" style="background:var(--off-white)">
+  <div class="container">
+    <div class="track-section-title fade-in">
+      <div class="track-section-icon"><i class="fas fa-plane-departure"></i></div>
+      <div>
+        <h2>Commercial Pilot Training Track</h2>
+        <p>DGCA-aligned ground school programs for commercial pilot licensing and flight operations careers</p>
+      </div>
+    </div>
+
+    <div class="course-detail-grid">
+      <!-- CPL -->
+      <div class="course-detail-card fade-in">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-plane-departure"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Commercial Pilot Training · Course 01</div>
+            <div class="cdc-title">CPL Ground School</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Comprehensive DGCA-aligned Commercial Pilot License (CPL) ground training covering all mandatory subjects — Air Navigation, Meteorology, Air Regulations, Technical General, Technical Specific, and Flight Planning. Taught by Ex-IAF pilots with structured study material and mock DGCA exam practice.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Air Navigation</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Meteorology</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Air Regulations</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Technical General</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Flight Planning</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> DGCA Mock Exams</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 6–12 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-certificate"></i> DGCA Exam Prep</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2 with PCM</div>
+            </div>
+            <a href="course-cpl" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATPL -->
+      <div class="course-detail-card fade-in delay-1">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-plane"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Commercial Pilot Training · Course 02</div>
+            <div class="cdc-title">ATPL Ground School</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Airline Transport Pilot License (ATPL) ground school — the highest pilot certification globally. Prepares CPL holders for command of multi-crew airline aircraft. Covers advanced meteorology, advanced navigation, aircraft performance, flight planning, communications, and airline operations procedures.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Advanced Navigation</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Aircraft Performance</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Airline Operations</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Advanced Meteorology</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Flight Planning</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Multi-Crew CRM</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 12–18 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-certificate"></i> DGCA ATPL</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> CPL Holders</div>
+            </div>
+            <a href="course-atpl" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Dispatcher -->
+      <div class="course-detail-card fade-in">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Commercial Pilot Training · Course 03</div>
+            <div class="cdc-title">Flight Dispatcher</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">DGCA Flight Dispatcher Ground Training program preparing candidates for the DGCA Flight Dispatcher License examination. Covers flight planning, meteorology for dispatchers, air traffic management, NOTAM reading, load and fuel planning, and emergency procedures coordination.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Flight Planning</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Meteorology</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Air Traffic Mgmt</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> NOTAM Reading</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Fuel Planning</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Emergency Procs</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 3–6 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-certificate"></i> DGCA License</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2</div>
+            </div>
+            <a href="course-flight-dispatcher" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Radio Telephony -->
+      <div class="course-detail-card fade-in delay-1">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-headset"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Commercial Pilot Training · Course 04</div>
+            <div class="cdc-title">Radio Telephony</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">DGCA Radio Telephony (RT) Ground Training for the Restricted Radio Telephony Operator License (FRTOL). Essential for pilots, flight dispatchers and aviation personnel. Covers RT procedures, aviation phraseology, ICAO standards, ATC communication and emergency RT operations.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> RT Procedures</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Aviation Phraseology</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> ICAO Standards</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> ATC Communication</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Emergency RT</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Practical Sessions</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 1–3 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-certificate"></i> FRTOL License</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2</div>
+            </div>
+            <a href="course-radio-telephony" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AME / ENGINEERING TRACK ===== -->
+<section id="ame" class="section-pad">
+  <div class="container">
+    <div class="track-section-title fade-in">
+      <div class="track-section-icon"><i class="fas fa-tools"></i></div>
+      <div>
+        <h2>Aircraft Maintenance Engineering Track</h2>
+        <p>EASA and DGCA aircraft maintenance engineering programs with global certification pathways</p>
+      </div>
+    </div>
+
+    <div class="course-detail-grid">
+      <!-- EASA Part 66 -->
+      <div class="course-detail-card fade-in">
+        <div class="course-detail-header" style="background: linear-gradient(135deg, #071d36, #0d3060);">
+          <div class="cdc-icon" style="background:rgba(200,148,58,0.25); border:2px solid rgba(200,148,58,0.4);"><i class="fas fa-tools"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category" style="color:var(--gold-light);">Aircraft Maintenance Engineering · Course 05 · FLAGSHIP</div>
+            <div class="cdc-title">EASA Part 66 (B1.1 / B1.3 / B2)</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">India's leading EASA AME Part 66 training school, in partnership with Aviotrace Swiss. Covers all 23 EASA modules for B1.1 (Aeroplane Turbine), B1.3 (Helicopter Turbine) and B2 (Avionics) licenses. Vajra Aviation has a proven record of 23 modules successfully cleared. Ideal for Ex-IAF AME personnel seeking civil aviation conversion.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> B1.1 – Aeroplane Turbine</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> B1.3 – Helicopter Turbine</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> B2 – Avionics</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> 23 EASA Modules</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Aviotrace Swiss Partner</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> IAF Conversion Path</div>
+          </div>
+          <div style="background:rgba(200,148,58,0.08); border:1px solid rgba(200,148,58,0.2); border-radius:var(--radius); padding:12px 16px; margin-bottom:16px; font-size:13px; color:var(--navy); display:flex; align-items:center; gap:8px;">
+            <i class="fas fa-star" style="color:var(--gold);"></i>
+            <strong>Flagship Program</strong> — 23 modules cleared | EASA Global License | Aviotrace Swiss Partnership
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 12–24 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-globe"></i> Global EASA License</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2 PCM / Engg</div>
+            </div>
+            <a href="course-easa-part-66" class="btn btn-gold btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DGCA AME -->
+      <div class="course-detail-card fade-in delay-1">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-cog"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Aircraft Maintenance Engineering · Course 06</div>
+            <div class="cdc-title">DGCA AME Training</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Specialized DGCA Aircraft Maintenance Engineer (AME) exam preparation training. Covers aircraft systems, aviation regulations, maintenance procedures, airworthiness standards and practical engineering principles. Designed for engineering graduates and diploma holders pursuing the DGCA AME license.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Aircraft Systems</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Aviation Regulations</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Maintenance Procs</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Airworthiness Std</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Exam Preparation</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Mock Tests</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 6–12 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-certificate"></i> DGCA AME</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> Engineering Grad</div>
+            </div>
+            <a href="course-dgca-ame" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graduate Engineering -->
+      <div class="course-detail-card fade-in">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Aircraft Maintenance Engineering · Course 07</div>
+            <div class="cdc-title">Graduate Engineering Training</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Specialized aviation-focused graduate engineering training program for students pursuing B.E./B.Tech in Aeronautical or related engineering disciplines. Covers aviation-specific technical training, practical exposure to aircraft systems and preparation for aviation industry roles in MRO, airlines and engineering consultancies.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Aircraft Structures</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Avionics Systems</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Propulsion Systems</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> MRO Practices</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Industry Exposure</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Placement Support</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> As per program</div>
+              <div class="cdc-meta-item"><i class="fas fa-certificate"></i> Engineering Degree</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2 PCM</div>
+            </div>
+            <a href="course-graduate-engineering" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AVIATION PERSONNEL TRACK ===== -->
+<section id="personnel" class="section-pad" style="background:var(--off-white)">
+  <div class="container">
+    <div class="track-section-title fade-in">
+      <div class="track-section-icon"><i class="fas fa-user-tie"></i></div>
+      <div>
+        <h2>Aviation Personnel Track</h2>
+        <p>Front-line aviation career training for cabin crew, ground staff and airline operations professionals</p>
+      </div>
+    </div>
+
+    <div class="course-detail-grid">
+      <!-- Cabin Crew -->
+      <div class="course-detail-card fade-in">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Aviation Personnel · Course 08</div>
+            <div class="cdc-title">Cabin Crew Training</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Professional cabin crew training covering in-flight safety, emergency procedures, grooming and personality development, customer service excellence, airline interview preparation and standard operating procedures. Prepares candidates for direct placements with IndiGo, Air India, SpiceJet and other leading Indian carriers.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Safety Procedures</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Emergency Training</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Grooming &amp; Etiquette</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Customer Service</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Interview Prep</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Airline Placement</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 3–6 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-briefcase"></i> Placement Support</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2 / Graduate</div>
+            </div>
+            <a href="course-cabin-crew" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ground Staff -->
+      <div class="course-detail-card fade-in delay-1">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-luggage-cart"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Aviation Personnel · Course 09</div>
+            <div class="cdc-title">Ground Staff Training</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Comprehensive airport ground staff training covering check-in procedures, boarding gate management, baggage handling, passenger assistance, ramp operations safety and airport security procedures. Prepares candidates for ground handling roles at India's major airports with leading airlines and handling companies.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Check-in Procedures</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Gate Management</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Baggage Handling</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Ramp Safety</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Airport Security</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Passenger Services</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 3–6 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-briefcase"></i> Placement Support</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2</div>
+            </div>
+            <a href="course-ground-staff" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Airline Ticketing -->
+      <div class="course-detail-card fade-in">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-ticket-alt"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Aviation Personnel · Course 10</div>
+            <div class="cdc-title">Airline Ticketing</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Airline ticketing and reservation training covering GDS (Global Distribution Systems), fare construction, ticketing rules, airline reservation procedures, CRS software training and customer handling skills. Opens career opportunities in airlines, travel agencies and airport ticketing counters across India.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> GDS Software</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Fare Construction</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Reservation Systems</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Ticketing Rules</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Customer Handling</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Industry Practices</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 1–3 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-briefcase"></i> Placement Support</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2</div>
+            </div>
+            <a href="course-airline-ticketing" class="btn btn-navy btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cargo Handling -->
+      <div class="course-detail-card fade-in delay-1">
+        <div class="course-detail-header">
+          <div class="cdc-icon"><i class="fas fa-boxes"></i></div>
+          <div class="cdc-title-wrap">
+            <div class="cdc-category">Aviation Personnel · Course 11</div>
+            <div class="cdc-title">Cargo Handling</div>
+          </div>
+        </div>
+        <div class="course-detail-body">
+          <p class="cdc-desc">Aviation cargo handling and logistics training covering cargo acceptance procedures, dangerous goods awareness, airway bill documentation, cargo tracing, freight forwarding basics and ramp cargo operations. Prepares candidates for cargo roles at airlines, air freight companies and airports across India.</p>
+          <div class="cdc-highlights">
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Cargo Acceptance</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Dangerous Goods</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> AWB Documentation</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Freight Forwarding</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> Ramp Operations</div>
+            <div class="cdc-hl-item"><i class="fas fa-check-circle"></i> IATA Regulations</div>
+          </div>
+          <div class="cdc-footer">
+            <div class="cdc-meta">
+              <div class="cdc-meta-item"><i class="fas fa-clock"></i> 1–3 Months</div>
+              <div class="cdc-meta-item"><i class="fas fa-briefcase"></i> Placement Support</div>
+              <div class="cdc-meta-item"><i class="fas fa-user-graduate"></i> 10+2</div>
+            </div>
+            <a href="contact" class="btn btn-navy btn-sm">Enquire Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COURSE FINDER CTA ===== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text fade-in-left">
+        <h2>Not Sure Which Course is Right for You?</h2>
+        <p>WhatsApp our advisors for a free 15-minute career counselling session. We'll help you find the perfect aviation program.</p>
+      </div>
+      <div class="cta-btns fade-in-right">
+        <a href="https://wa.me/918111086614?text=Hi%2C%20I%20need%20help%20choosing%20the%20right%20aviation%20course%20at%20Vajra%20Aviation." target="_blank" class="btn btn-gold btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Course Advisor</a>
+        <a href="contact" class="btn btn-outline-white btn-lg">Send Enquiry <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="strip-stat fade-in">
+      <div class="strip-stat-num">500+</div>
+      <div class="strip-stat-label">Students Trained</div>
+    </div>
+    <div class="strip-sep"></div>
+    <div class="strip-stat fade-in delay-1">
+      <div class="strip-stat-num">11</div>
+      <div class="strip-stat-label">Courses Offered</div>
+    </div>
+    <div class="strip-sep"></div>
+    <div class="strip-stat fade-in delay-2">
+      <div class="strip-stat-num">95%+</div>
+      <div class="strip-stat-label">Placement Rate</div>
+    </div>
+    <div class="strip-sep"></div>
+    <div class="strip-stat fade-in delay-3">
+      <div class="strip-stat-num">23</div>
+      <div class="strip-stat-label">EASA Modules Cleared</div>
+    </div>
+    <div class="strip-sep"></div>
+    <div class="strip-stat fade-in">
+      <div class="strip-stat-num">10+</div>
+      <div class="strip-stat-label">Years Experience</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="images/logo-footer.png" alt="Vajra Aviation" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+          <div class="logo-text">
+            <span class="brand-name">VAJRA</span>
+            <span class="brand-sub">Aviation Private Limited</span>
+          </div>
+        </a>
+        <p class="footer-desc">Vajra Aviation Private Limited — Bangalore's premier aviation training institute founded by Ex-IAF officers. ISO 9001:2015 certified. Shaping the next generation of aviation professionals since 2014.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a></li>
+          <li><a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a></li>
+          <li><a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a></li>
+          <li><a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a></li>
+          <li><a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew Training</a></li>
+          <li><a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a></li>
+          <li><a href="courses"><i class="fas fa-th-list"></i> View All Courses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Our Faculty</a></li>
+          <li><a href="placements"><i class="fas fa-briefcase"></i> Placements</a></li>
+          <li><a href="blog"><i class="fas fa-blog"></i> Blog &amp; Articles</a></li>
+          <li><a href="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <li><a href="contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+916364919234">6364919234 (Admissions)</a></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/918111086614" target="_blank">8111086614 (WhatsApp)</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919840920090">9840920090</a></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>NO.95, Third Floor, G R Arcade, Sector-C, Amrutha Nagar, Amruthalli, Bangalore – 560092</span></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+        <div style="margin-top:16px;">
+          <h4 class="footer-heading">Our Partners</h4>
+          <ul class="footer-links">
+            <li><a href="https://aviotrace.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> Aviotrace Swiss</a></li>
+            <li><a href="https://www.ianzl.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> IANZL – New Zealand</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vajra Aviation Private Limited. All Rights Reserved. | ISO 9001:2015 Certified</p>
+      <div class="footer-bottom-links">
+        <a href="privacy">Privacy Policy</a>
+        <a href="contact">Contact</a>
+        <a href="sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  <a href="https://wa.me/918111086614?text=Hi%2C%20I%20want%20to%20know%20more%20about%20aviation%20courses%20at%20Vajra%20Aviation." target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

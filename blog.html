@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aviation career blog by Vajra Aviation Bangalore — CPL guide, EASA Part 66, cabin crew training, DGCA exam tips, IAF to civil aviation transition and industry news." />
+  <meta name="keywords" content="aviation career blog India, CPL guide 2025, EASA Part 66 India, cabin crew training blog, DGCA exam tips, IAF civil aviation transition, aviation jobs India" />
+  <title>Aviation Career Blog | Vajra Aviation Bangalore</title>
+  
+  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-logo.png?v=1" />
+  <link rel="apple-touch-icon" href="images/favicon-logo.png?v=1" />
+  <!-- Preconnect for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <!-- Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
+  <!-- Font Awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="canonical" href="https://vajraaviation.com/blog.html" />
+  <link rel="stylesheet" href="styles/main.css?v=6" />
+  <meta property="og:title" content="Aviation Career Blog | Vajra Aviation Bangalore" />
+  <meta property="og:description" content="Expert aviation career guidance from Ex-IAF instructors — CPL, EASA Part 66, cabin crew and industry insights." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vajraaviation.com/blog.html" />
+
+  <meta property="og:image" content="https://vajraaviation.com/images/logo.png?v=3" />
+
+  <style>
+    /* ── BLOG CATEGORY CHIPS ── */
+    .blog-categories {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .blog-cat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border: 1.5px solid var(--light-gray);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-body);
+      background: var(--white);
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .blog-cat-chip:hover, .blog-cat-chip.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .blog-cat-chip i { font-size: 12px; color: var(--gold); }
+    .blog-cat-chip:hover i, .blog-cat-chip.active i { color: var(--gold-light); }
+
+    /* ── BLOG GRID ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    /* ── BLOG CARD ── */
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--light-gray);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-6px);
+      border-color: rgba(200,148,58,0.2);
+    }
+
+    .blog-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-mid));
+    }
+    .blog-card-img-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-mid));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      color: rgba(200,148,58,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(7,29,54,0.6));
+    }
+
+    .blog-card-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .blog-category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .cat-pilot { background: rgba(11,45,82,0.1); color: var(--navy); }
+    .cat-career { background: rgba(200,148,58,0.1); color: var(--gold-dark); }
+    .cat-easa { background: rgba(25,100,50,0.1); color: #196432; }
+    .cat-cabin { background: rgba(155,44,140,0.1); color: #9b2c8c; }
+    .cat-news { background: rgba(200,80,30,0.1); color: #c8501e; }
+    .cat-study { background: rgba(40,80,200,0.1); color: #2850c8; }
+
+    .blog-date {
+      font-size: 12px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .blog-date i { font-size: 11px; color: var(--gold); }
+
+    .blog-card-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+    .blog-card:hover .blog-card-title { color: var(--gold-dark); }
+
+    .blog-card-excerpt {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--light-gray);
+    }
+    .blog-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .blog-author-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 800;
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+    .blog-author-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .blog-author-role {
+      font-size: 11px;
+      color: var(--gray);
+    }
+    .blog-read-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--navy);
+      padding: 8px 14px;
+      background: var(--off-white);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--light-gray);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .blog-read-link:hover {
+      background: var(--gold);
+      color: var(--white);
+      border-color: var(--gold);
+    }
+
+    /* ── READ TIME BADGE ── */
+    .blog-read-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+    .blog-read-time i { color: var(--gold); font-size: 10px; }
+
+    /* ── FEATURED POST (full-width) ── */
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--light-gray);
+      margin-bottom: 48px;
+      transition: var(--transition);
+    }
+    .blog-featured:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+    .blog-featured-img {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-mid));
+      min-height: 320px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 100px;
+      color: rgba(200,148,58,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-featured-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 60%, rgba(255,255,255,0.05));
+    }
+    .blog-featured-body { padding: 40px 44px; display: flex; flex-direction: column; justify-content: center; }
+    .blog-featured-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(200,148,58,0.1);
+      border: 1px solid rgba(200,148,58,0.25);
+      color: var(--gold-dark);
+      font-size: 11px; font-weight: 700;
+      padding: 5px 14px; border-radius: 30px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: fit-content;
+    }
+    .blog-featured-title {
+      font-size: 26px; font-weight: 900;
+      color: var(--navy); line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .blog-featured-excerpt {
+      font-size: 15px; color: var(--gray);
+      line-height: 1.75; margin-bottom: 24px;
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter-section::before {
+      content: '';
+      position: absolute;
+      right: -80px; top: -80px;
+      width: 350px; height: 350px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,148,58,0.1);
+    }
+    .newsletter-section::after {
+      content: '';
+      position: absolute;
+      left: -60px; bottom: -60px;
+      width: 250px; height: 250px;
+      border-radius: 50%;
+      border: 1px solid rgba(200,148,58,0.07);
+    }
+    .newsletter-inner {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .newsletter-inner h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900; color: var(--white);
+      margin-bottom: 12px;
+    }
+    .newsletter-inner p {
+      font-size: 16px; color: rgba(255,255,255,0.7);
+      line-height: 1.7; margin-bottom: 32px;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-size: 14.5px;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.45); }
+    .newsletter-form input:focus { border-color: var(--gold); background: rgba(255,255,255,0.12); }
+    .newsletter-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .newsletter-tag {
+      background: rgba(200,148,58,0.15);
+      border: 1px solid rgba(200,148,58,0.25);
+      color: var(--gold-light);
+      font-size: 12px; font-weight: 600;
+      padding: 5px 14px; border-radius: 30px;
+    }
+
+    /* ── SIDEBAR-STYLE TOPIC CARDS ── */
+    .blog-topics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .blog-topic-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--light-gray);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .blog-topic-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); border-color: rgba(200,148,58,0.25); }
+    .blog-topic-card i { font-size: 32px; color: var(--navy); margin-bottom: 12px; display: block; }
+    .blog-topic-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .blog-topic-card span { font-size: 12px; color: var(--gold); font-weight: 600; }
+
+    @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-img { min-height: 200px; font-size: 60px; }
+      .blog-featured-body { padding: 28px; }
+      .blog-topics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .blog-topics-grid { grid-template-columns: 1fr 1fr; }
+      .newsletter-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@vajraaviation.com"><i class="fas fa-envelope"></i> info@vajraaviation.com</a>
+      <span class="top-bar-sep">|</span>
+      <a href="tel:+916364919234"><i class="fas fa-phone"></i> 6364919234 &nbsp;|&nbsp; 8111086614 &nbsp;|&nbsp; 9840920090</a>
+      <span class="top-bar-sep">|</span>
+      <span><i class="fas fa-clock" style="color:var(--gold)"></i> Mon–Sat: 9AM–6PM</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <img src="images/logo.png?v=3" alt="Vajra Aviation Logo" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+        <div class="logo-text">
+          <span class="brand-name">VAJRA</span>
+          <span class="brand-sub">Aviation Private Limited</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="courses" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-dropdown">
+            <div style="grid-column:1; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Commercial Pilot Training</div>
+              <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+              <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+              <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+              <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+            </div>
+            <div style="grid-column:2; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Aircraft Maintenance Engineering</div>
+              <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+              <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+              <a href="course-graduate-engineering"><i class="fas fa-graduation-cap"></i> Graduate Engineering</a>
+            </div>
+            <div style="grid-column:3; display:flex; flex-direction:column; gap:4px;">
+              <div class="mega-col-title">Aviation Personnel</div>
+              <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+              <a href="course-ground-staff"><i class="fas fa-luggage-cart"></i> Ground Staff</a>
+              <a href="course-airline-ticketing"><i class="fas fa-ticket-alt"></i> Airline Ticketing</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about" class="nav-link">About Us</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Facility <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown">
+            <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+            <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="placements" class="nav-link">Placements</a></li>
+        <li class="nav-item"><a href="faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <a href="contact" class="btn btn-gold nav-cta">
+        <i class="fas fa-paper-plane"></i> Enquire Now
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo">
+      <img src="images/logo.png?v=3" alt="Vajra Aviation" class="logo-img" style="height:38px;" onerror="this.style.display='none'" />
+      <div class="logo-text">
+        <span class="brand-name" style="font-size:16px;">VAJRA</span>
+        <span class="brand-sub">Aviation Pvt Ltd</span>
+      </div>
+    </a>
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="courses" class="mobile-nav-link" data-submenu="coursesSub">Courses <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="coursesSub">
+      <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+      <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+      <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+      <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+      <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+      <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+      <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+    </div>
+    <a href="about" class="mobile-nav-link">About Us</a>
+    <a class="mobile-nav-link" data-submenu="facilitySub">Facility <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="facilitySub">
+      <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+      <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+    </div>
+    <a href="placements" class="mobile-nav-link">Placements</a>
+    <a href="faq" class="mobile-nav-link">FAQ</a>
+    <a href="contact" class="mobile-nav-link">Contact Us</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-contact-item"><i class="fas fa-phone"></i><span>6364919234 / 8111086614</span></div>
+    <div class="mobile-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+    <div class="mobile-contact-item"><i class="fas fa-map-marker-alt"></i><span>Amrutha Nagar, Bangalore - 560092</span></div>
+    <a href="contact" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:16px;">
+      <i class="fas fa-paper-plane"></i> Enquire Now
+    </a>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero-label"><i class="fas fa-pen-nib"></i> Expert Aviation Insights</span>
+    <h1>Aviation Career <span>Blog</span></h1>
+    <p>Expert guidance on aviation careers, DGCA exams, EASA licensing and industry news — written by Vajra Aviation's Ex-IAF faculty and aviation professionals.</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Blog</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG MAIN ===== -->
+<section class="section-pad">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <span class="section-label">Latest Articles</span>
+      <h2 class="section-title">Aviation Career <span>Insights</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Stay informed with the latest aviation career guidance, exam tips and industry news from India's premier Ex-IAF aviation training institute.</p>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="blog-categories fade-in">
+      <span class="blog-cat-chip active"><i class="fas fa-th"></i> All Articles</span>
+      <span class="blog-cat-chip"><i class="fas fa-plane-departure"></i> Commercial Pilot Training</span>
+      <span class="blog-cat-chip"><i class="fas fa-tools"></i> EASA</span>
+      <span class="blog-cat-chip"><i class="fas fa-user-tie"></i> Cabin Crew</span>
+      <span class="blog-cat-chip"><i class="fas fa-newspaper"></i> Industry News</span>
+      <span class="blog-cat-chip"><i class="fas fa-book"></i> Study Tips</span>
+      <span class="blog-cat-chip"><i class="fas fa-route"></i> Career Guides</span>
+    </div>
+
+    <!-- Featured Post -->
+    <div class="blog-featured fade-in">
+      <div class="blog-featured-img">
+        <i class="fas fa-plane-departure"></i>
+      </div>
+      <div class="blog-featured-body">
+        <div class="blog-featured-tag"><i class="fas fa-star"></i> Featured Article</div>
+        <span class="blog-category-badge cat-pilot" style="margin-bottom:10px;"><i class="fas fa-plane-departure"></i> Commercial Pilot Training</span>
+        <h2 class="blog-featured-title">How to Get a CPL in India: Complete 2025 DGCA Guide</h2>
+        <p class="blog-featured-excerpt">Everything you need to know about obtaining a Commercial Pilot License (CPL) in India — from eligibility and medical requirements to DGCA exam subjects, flying hours and the complete ground training pathway. Written by our Ex-IAF CPL instructors with 25+ years of flying experience.</p>
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+          <div class="blog-date"><i class="fas fa-calendar"></i> March 2025</div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 12 min read</div>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+          <div class="blog-author">
+            <div class="blog-author-avatar">WC</div>
+            <div>
+              <div class="blog-author-name">Wg Cdr (Retd) Rajesh Sharma</div>
+              <div class="blog-author-role">Chief Instructor, Vajra Aviation</div>
+            </div>
+          </div>
+          <a href="contact" class="btn btn-navy btn-sm">Read Full Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Grid: 6 cards -->
+    <div class="blog-grid">
+
+      <!-- Blog 1: CPL -->
+      <div class="blog-card fade-in">
+        <div class="blog-card-img-placeholder">
+          <i class="fas fa-plane-departure"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-category-badge cat-pilot"><i class="fas fa-plane-departure"></i> Commercial Pilot Training</span>
+            <span class="blog-date"><i class="fas fa-calendar"></i> Mar 2025</span>
+          </div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 12 min read</div>
+          <h3 class="blog-card-title">How to Get a CPL in India: Complete 2025 DGCA Guide</h3>
+          <p class="blog-card-excerpt">A step-by-step guide to obtaining your Commercial Pilot License in India — covering DGCA eligibility, ground school subjects, flying hours requirements, medical class and exam strategy from Ex-IAF instructors.</p>
+          <div class="blog-card-footer">
+            <div class="blog-author">
+              <div class="blog-author-avatar">WC</div>
+              <div>
+                <div class="blog-author-name">Wg Cdr (Retd) R. Sharma</div>
+                <div class="blog-author-role">Chief Instructor</div>
+              </div>
+            </div>
+            <a href="contact" class="blog-read-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2: IAF Transition -->
+      <div class="blog-card fade-in delay-1">
+        <div class="blog-card-img-placeholder" style="background:linear-gradient(135deg,#07122a,#163d6e);">
+          <i class="fas fa-fighter-jet"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-category-badge cat-career"><i class="fas fa-route"></i> Career Guide</span>
+            <span class="blog-date"><i class="fas fa-calendar"></i> Feb 2025</span>
+          </div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 10 min read</div>
+          <h3 class="blog-card-title">IAF to Civil Aviation: The Complete Career Transition Guide</h3>
+          <p class="blog-card-excerpt">Ex-Indian Air Force personnel have a unique advantage in civil aviation. This comprehensive guide covers EASA Part 66 conversion, CPL pathways, DGCA AME licensing and how to leverage your military service records for a smooth, fast transition.</p>
+          <div class="blog-card-footer">
+            <div class="blog-author">
+              <div class="blog-author-avatar">GC</div>
+              <div>
+                <div class="blog-author-name">Gp Capt (Retd) S. Kumar</div>
+                <div class="blog-author-role">Director, Vajra Aviation</div>
+              </div>
+            </div>
+            <a href="contact" class="blog-read-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 3: EASA B1 vs B2 -->
+      <div class="blog-card fade-in delay-2">
+        <div class="blog-card-img-placeholder" style="background:linear-gradient(135deg,#071d36,#1e4d87);">
+          <i class="fas fa-tools"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-category-badge cat-easa"><i class="fas fa-tools"></i> EASA</span>
+            <span class="blog-date"><i class="fas fa-calendar"></i> Feb 2025</span>
+          </div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 8 min read</div>
+          <h3 class="blog-card-title">EASA Part 66 B1 vs B2: Which License Should You Pursue?</h3>
+          <p class="blog-card-excerpt">EASA Part 66 B1 (Mechanical) and B2 (Avionics) are the two primary AME license categories. This detailed comparison covers scope of work, module requirements, career prospects, salary expectations and how to choose the right track for your background and goals.</p>
+          <div class="blog-card-footer">
+            <div class="blog-author">
+              <div class="blog-author-avatar">SL</div>
+              <div>
+                <div class="blog-author-name">Sqn Ldr (Retd) P. Nair</div>
+                <div class="blog-author-role">Training Head</div>
+              </div>
+            </div>
+            <a href="contact" class="blog-read-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 4: Cabin Crew -->
+      <div class="blog-card fade-in">
+        <div class="blog-card-img-placeholder" style="background:linear-gradient(135deg,#4a0f4a,#8b2a8b);">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-category-badge cat-cabin"><i class="fas fa-user-tie"></i> Cabin Crew</span>
+            <span class="blog-date"><i class="fas fa-calendar"></i> Jan 2025</span>
+          </div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 7 min read</div>
+          <h3 class="blog-card-title">What Does Cabin Crew Training Actually Cover?</h3>
+          <p class="blog-card-excerpt">Most aspiring flight attendants don't know what cabin crew training really involves beyond grooming. This article breaks down everything — safety training, emergency procedures, first aid, customer service, CRM, and what airlines actually look for in cabin crew candidates.</p>
+          <div class="blog-card-footer">
+            <div class="blog-author">
+              <div class="blog-author-avatar">AK</div>
+              <div>
+                <div class="blog-author-name">Mrs. Anitha Krishnan</div>
+                <div class="blog-author-role">Admin Director</div>
+              </div>
+            </div>
+            <a href="contact" class="blog-read-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 5: Airlines Hiring 2025 -->
+      <div class="blog-card fade-in delay-1">
+        <div class="blog-card-img-placeholder" style="background:linear-gradient(135deg,#5c1e00,#c8501e);">
+          <i class="fas fa-newspaper"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-category-badge cat-news"><i class="fas fa-newspaper"></i> Industry News</span>
+            <span class="blog-date"><i class="fas fa-calendar"></i> Jan 2025</span>
+          </div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 6 min read</div>
+          <h3 class="blog-card-title">Top Airlines Hiring Aviation Graduates in India 2025</h3>
+          <p class="blog-card-excerpt">India's aviation industry is booming — with IndiGo, Air India, Akasa Air and others expanding their fleets and workforce. This article covers which airlines are hiring in 2025, what roles are in demand, and how Vajra Aviation graduates are positioned to take advantage of this growth.</p>
+          <div class="blog-card-footer">
+            <div class="blog-author">
+              <div class="blog-author-avatar">VA</div>
+              <div>
+                <div class="blog-author-name">Vajra Aviation Team</div>
+                <div class="blog-author-role">Editorial</div>
+              </div>
+            </div>
+            <a href="contact" class="blog-read-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 6: DGCA Exam Tips -->
+      <div class="blog-card fade-in delay-2">
+        <div class="blog-card-img-placeholder" style="background:linear-gradient(135deg,#0a1850,#2850c8);">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-category-badge cat-study"><i class="fas fa-book"></i> Study Tips</span>
+            <span class="blog-date"><i class="fas fa-calendar"></i> Dec 2024</span>
+          </div>
+          <div class="blog-read-time"><i class="fas fa-clock"></i> 9 min read</div>
+          <h3 class="blog-card-title">How to Prepare for DGCA Ground School Exams</h3>
+          <p class="blog-card-excerpt">DGCA CPL and ATPL ground school exams are challenging — but with the right strategy, you can clear them in the first attempt. This guide from our Ex-IAF instructors covers subject-wise preparation strategies, recommended study resources, time management and common mistakes to avoid.</p>
+          <div class="blog-card-footer">
+            <div class="blog-author">
+              <div class="blog-author-avatar">WC</div>
+              <div>
+                <div class="blog-author-name">Wg Cdr (Retd) R. Sharma</div>
+                <div class="blog-author-role">Chief Instructor</div>
+              </div>
+            </div>
+            <a href="contact" class="blog-read-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end blog-grid -->
+
+    <!-- Browse by Topic -->
+    <div class="section-header fade-in" style="margin-top:72px; margin-bottom:24px;">
+      <span class="section-label">Explore by Topic</span>
+      <h2 class="section-title">Browse <span>Categories</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="blog-topics-grid fade-in">
+      <a href="courses.html#pilot" class="blog-topic-card">
+        <i class="fas fa-plane-departure" style="color:var(--navy);"></i>
+        <h4>Commercial Pilot Training</h4>
+        <span>CPL, ATPL, Dispatcher</span>
+      </a>
+      <a href="course-easa-part-66" class="blog-topic-card">
+        <i class="fas fa-tools" style="color:#196432;"></i>
+        <h4>EASA Part 66</h4>
+        <span>B1.1, B1.3, B2 Guides</span>
+      </a>
+      <a href="course-cabin-crew" class="blog-topic-card">
+        <i class="fas fa-user-tie" style="color:#9b2c8c;"></i>
+        <h4>Cabin Crew</h4>
+        <span>Training &amp; Career Tips</span>
+      </a>
+      <a href="placements" class="blog-topic-card">
+        <i class="fas fa-newspaper" style="color:#c8501e;"></i>
+        <h4>Industry News</h4>
+        <span>Hiring &amp; Aviation Updates</span>
+      </a>
+      <a href="faq" class="blog-topic-card">
+        <i class="fas fa-book" style="color:#2850c8;"></i>
+        <h4>Study Tips</h4>
+        <span>DGCA Exam Strategies</span>
+      </a>
+      <a href="about" class="blog-topic-card">
+        <i class="fas fa-route" style="color:var(--gold-dark);"></i>
+        <h4>Career Guides</h4>
+        <span>IAF Transition &amp; More</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER SIGNUP ===== -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <span class="section-label" style="background:rgba(200,148,58,0.15); border-color:rgba(200,148,58,0.3); color:var(--gold-light);">Stay Updated</span>
+      <h2>Subscribe to Our Aviation Career Newsletter</h2>
+      <p>Get the latest DGCA updates, batch announcements, aviation industry news and career tips delivered straight to your inbox — for free. Join 1,000+ aviation aspirants.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+        <input type="email" placeholder="Enter your email address" required />
+        <button type="submit" class="btn btn-gold">Subscribe <i class="fas fa-paper-plane"></i></button>
+      </form>
+      <div class="newsletter-tags">
+        <span class="newsletter-tag"><i class="fas fa-check"></i> DGCA Updates</span>
+        <span class="newsletter-tag"><i class="fas fa-check"></i> Batch Dates</span>
+        <span class="newsletter-tag"><i class="fas fa-check"></i> Career Tips</span>
+        <span class="newsletter-tag"><i class="fas fa-check"></i> No Spam</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text fade-in-left">
+        <h2>Ready to Start Your Aviation Career?</h2>
+        <p>Stop reading — start doing. Talk to our advisors today and enroll in the right aviation course for you.</p>
+      </div>
+      <div class="cta-btns fade-in-right">
+        <a href="courses" class="btn btn-gold btn-lg">Explore Courses <i class="fas fa-arrow-right"></i></a>
+        <a href="contact" class="btn btn-outline-white btn-lg">Enquire Now <i class="fas fa-paper-plane"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="images/logo-footer.png" alt="Vajra Aviation" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+          <div class="logo-text">
+            <span class="brand-name">VAJRA</span>
+            <span class="brand-sub">Aviation Private Limited</span>
+          </div>
+        </a>
+        <p class="footer-desc">Vajra Aviation Private Limited — Bangalore's premier aviation training institute founded by Ex-IAF officers. ISO 9001:2015 certified. Shaping the next generation of aviation professionals since 2014.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a></li>
+          <li><a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a></li>
+          <li><a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a></li>
+          <li><a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a></li>
+          <li><a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew Training</a></li>
+          <li><a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a></li>
+          <li><a href="courses"><i class="fas fa-th-list"></i> View All Courses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Our Faculty</a></li>
+          <li><a href="placements"><i class="fas fa-briefcase"></i> Placements</a></li>
+          <li><a href="blog"><i class="fas fa-blog"></i> Blog &amp; Articles</a></li>
+          <li><a href="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <li><a href="contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+916364919234">6364919234 (Admissions)</a></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/918111086614" target="_blank">8111086614 (WhatsApp)</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919840920090">9840920090</a></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>NO.95, Third Floor, G R Arcade, Sector-C, Amrutha Nagar, Amruthalli, Bangalore – 560092</span></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+        <div style="margin-top:16px;">
+          <h4 class="footer-heading">Our Partners</h4>
+          <ul class="footer-links">
+            <li><a href="https://aviotrace.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> Aviotrace Swiss</a></li>
+            <li><a href="https://www.ianzl.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> IANZL – New Zealand</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vajra Aviation Private Limited. All Rights Reserved. | ISO 9001:2015 Certified</p>
+      <div class="footer-bottom-links">
+        <a href="privacy">Privacy Policy</a>
+        <a href="contact">Contact</a>
+        <a href="sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  <a href="https://wa.me/918111086614?text=Hi%2C%20I%20want%20to%20know%20more%20about%20aviation%20courses%20at%20Vajra%20Aviation." target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/main.js" defer></script>
+<script>
+  function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const input = e.target.querySelector('input[type="email"]');
+    btn.textContent = 'Subscribed!';
+    btn.style.background = '#22c55e';
+    input.value = '';
+    setTimeout(() => {
+      btn.innerHTML = 'Subscribe <i class="fas fa-paper-plane"></i>';
+      btn.style.background = '';
+    }, 3000);
+  }
+</script>
+</body>
+</html>

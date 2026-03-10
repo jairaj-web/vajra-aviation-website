@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet Vajra Aviation's expert faculty — Ex-IAF officers and DGCA-approved aviation professionals with decades of experience teaching CPL, ATPL, EASA Part 66 in Bangalore." />
+  <title>Aviation Faculty Bangalore | Ex-IAF Instructors | Vajra Aviation</title>
+  
+  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-logo.png?v=1" />
+  <link rel="apple-touch-icon" href="images/favicon-logo.png?v=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="canonical" href="https://vajraaviation.com/facility-faculty.html" />
+  <meta property="og:title" content="Aviation Faculty Bangalore | Ex-IAF Instructors | Vajra Aviation" />
+  <meta property="og:description" content="Ex-IAF officers and certified aviation instructors teaching CPL, ATPL, EASA Part 66, Cabin Crew at Vajra Aviation, Bangalore." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vajraaviation.com/facility-faculty.html" />
+  <meta property="og:image" content="https://vajraaviation.com/images/logo.png?v=3" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Aviation Faculty - Vajra Aviation","url":"https://vajraaviation.com/facility-faculty.html","description":"Expert aviation faculty including Ex-IAF officers at Vajra Aviation, Bangalore.","provider":{"@type":"EducationalOrganization","name":"Vajra Aviation Private Limited","url":"https://vajraaviation.com"}}
+  </script>
+  <link rel="stylesheet" href="styles/main.css?v=6" />
+  <style>
+    /* ── FACULTY HERO ── */
+    .faculty-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .faculty-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(200,148,58,0.12) 0%, transparent 60%);
+    }
+    .faculty-hero-content { position: relative; z-index: 2; }
+    .faculty-hero h1 { font-size: clamp(28px,4.5vw,48px); font-weight: 900; color: var(--white); margin-bottom: 14px; }
+    .faculty-hero h1 span { color: var(--gold); }
+    .faculty-hero p { font-size: 16px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+    .faculty-hero-stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
+    .faculty-hero-stat { text-align: center; }
+    .faculty-hero-stat .num { font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 900; color: var(--gold); line-height: 1; }
+    .faculty-hero-stat .lbl { font-size: 12px; color: rgba(255,255,255,0.7); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+
+    /* ── FACULTY GRID ── */
+    .faculty-section { padding: 80px 0; background: var(--off-white); }
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 52px;
+    }
+    .faculty-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--light-gray);
+    }
+    .faculty-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
+
+    /* Image area */
+    .faculty-img-wrap {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy-light));
+    }
+    .faculty-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s; }
+    .faculty-card:hover .faculty-img-wrap img { transform: scale(1.06); }
+    .faculty-img-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px;
+    }
+    .faculty-img-placeholder i { font-size: 72px; color: rgba(255,255,255,0.2); }
+    .faculty-badge {
+      position: absolute;
+      bottom: 12px; left: 12px;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 20px;
+    }
+
+    /* Body */
+    .faculty-body { padding: 24px; }
+    .faculty-name { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .faculty-role { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+    .faculty-role::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--gold); border-radius: 2px; }
+    .faculty-desc { font-size: 13.5px; color: var(--text-body); line-height: 1.75; margin-bottom: 18px; }
+    .faculty-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .faculty-tag {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .faculty-tag.navy { background: rgba(11,45,82,0.08); color: var(--navy); }
+    .faculty-tag.gold { background: rgba(200,148,58,0.12); color: var(--gold-dark); }
+
+    /* ── WHY FACULTY STANDS OUT ── */
+    .why-faculty { padding: 80px 0; background: var(--white); }
+    .why-faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 48px; }
+    .why-card {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+    }
+    .why-card:hover { transform: translateY(-6px); }
+    .why-icon { width: 64px; height: 64px; background: rgba(200,148,58,0.15); border: 2px solid rgba(200,148,58,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .why-icon i { font-size: 26px; color: var(--gold); }
+    .why-card h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .why-card p { font-size: 13.5px; color: rgba(255,255,255,0.75); line-height: 1.7; }
+
+    /* ── READ MORE ── */
+    .faculty-extra {
+      display: none;
+      margin-top: 10px;
+    }
+    .faculty-extra.open { display: block; }
+    .btn-read-more {
+      margin-top: 14px;
+      background: none;
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.3px;
+    }
+    .btn-read-more:hover { background: var(--navy); color: var(--white); }
+
+    @media (max-width: 900px) {
+      .faculty-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    }
+    @media (max-width: 600px) {
+      .faculty-grid { grid-template-columns: 1fr; gap: 16px; }
+      .faculty-hero-stats { gap: 16px; flex-wrap: wrap; }
+      .faculty-hero-stat .num { font-size: 26px; }
+      .faculty-hero-stat .lbl { font-size: 10px; }
+      .faculty-section { padding: 48px 0; }
+      .faculty-img-wrap { height: 260px !important; }
+      .faculty-body { padding: 18px; }
+      .faculty-name { font-size: 16px; }
+      .faculty-role { font-size: 12px; }
+      .faculty-desc { font-size: 13px; }
+      .btn-read-more { font-size: 11px; padding: 5px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@vajraaviation.com"><i class="fas fa-envelope"></i> info@vajraaviation.com</a>
+      <span class="top-bar-sep">|</span>
+      <a href="tel:+916364919234"><i class="fas fa-phone"></i> 6364919234 &nbsp;|&nbsp; 8111086614 &nbsp;|&nbsp; 9840920090</a>
+      <span class="top-bar-sep">|</span>
+      <span><i class="fas fa-clock" style="color:var(--gold)"></i> Mon–Sat: 9AM–6PM</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="/" class="logo">
+        <img src="images/logo.png?v=3" alt="Vajra Aviation Logo" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+        <div class="logo-text">
+          <span class="brand-name">VAJRA</span>
+          <span class="brand-sub">Aviation Private Limited</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="courses" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-dropdown">
+            <div style="grid-column:1;display:flex;flex-direction:column;gap:4px;">
+              <div class="mega-col-title">Commercial Pilot Training</div>
+              <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+              <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+              <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+              <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+            </div>
+            <div style="grid-column:2;display:flex;flex-direction:column;gap:4px;">
+              <div class="mega-col-title">Aircraft Maintenance Engineering</div>
+              <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+              <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+              <a href="course-graduate-engineering"><i class="fas fa-graduation-cap"></i> Graduate Engineering</a>
+            </div>
+            <div style="grid-column:3;display:flex;flex-direction:column;gap:4px;">
+              <div class="mega-col-title">Aviation Personnel</div>
+              <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+              <a href="course-ground-staff"><i class="fas fa-luggage-cart"></i> Ground Staff</a>
+              <a href="course-airline-ticketing"><i class="fas fa-ticket-alt"></i> Airline Ticketing</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about" class="nav-link">About Us</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Facility <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown">
+            <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+            <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="placements" class="nav-link">Placements</a></li>
+        <li class="nav-item"><a href="faq" class="nav-link">FAQ</a></li>
+      </ul>
+      <a href="contact" class="btn btn-gold nav-cta"><i class="fas fa-paper-plane"></i> Enquire Now</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo">
+      <img src="images/logo.png?v=3" alt="Vajra Aviation" class="logo-img" style="height:38px;" onerror="this.style.display='none'" />
+      <div class="logo-text"><span class="brand-name" style="font-size:16px;">VAJRA</span><span class="brand-sub">Aviation Pvt Ltd</span></div>
+    </a>
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="courses" class="mobile-nav-link" data-submenu="coursesSub">Courses <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="coursesSub">
+      <a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+      <a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+      <a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+      <a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+      <a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+      <a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+      <a href="course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+    </div>
+    <a href="about" class="mobile-nav-link">About Us</a>
+    <a class="mobile-nav-link active" data-submenu="facilitySub">Facility <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="facilitySub">
+      <a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+      <a href="facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+    </div>
+    <a href="placements" class="mobile-nav-link">Placements</a>
+    <a href="faq" class="mobile-nav-link">FAQ</a>
+    <a href="contact" class="mobile-nav-link">Contact Us</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-contact-item"><i class="fas fa-phone"></i><span>6364919234 / 8111086614</span></div>
+    <div class="mobile-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+    <div class="mobile-contact-item"><i class="fas fa-map-marker-alt"></i><span>Amrutha Nagar, Bangalore - 560092</span></div>
+    <a href="contact" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:16px;"><i class="fas fa-paper-plane"></i> Enquire Now</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="faculty-hero">
+  <div class="container">
+    <div class="faculty-hero-content fade-in">
+      <div class="breadcrumb" style="justify-content:center;margin-bottom:20px;">
+        <a href="/" style="color:rgba(255,255,255,0.6);">Home</a>
+        <i class="fas fa-chevron-right" style="color:rgba(255,255,255,0.4);font-size:10px;"></i>
+        <span style="color:rgba(255,255,255,0.6);">Facility</span>
+        <i class="fas fa-chevron-right" style="color:rgba(255,255,255,0.4);font-size:10px;"></i>
+        <span style="color:var(--gold);">Faculty</span>
+      </div>
+      <h1>Meet Our Expert <span>Faculty</span></h1>
+      <p>Trained by Ex-IAF officers and certified aviation professionals with real-world airline and maintenance experience.</p>
+      <div class="faculty-hero-stats">
+        <div class="faculty-hero-stat"><div class="num">6+</div><div class="lbl">Expert Instructors</div></div>
+        <div class="faculty-hero-stat"><div class="num">10+</div><div class="lbl">Years Avg. Experience</div></div>
+        <div class="faculty-hero-stat"><div class="num">500+</div><div class="lbl">Students Trained</div></div>
+        <div class="faculty-hero-stat"><div class="num">100%</div><div class="lbl">DGCA Certified</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACULTY GRID ===== -->
+<section class="faculty-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Our Team</span>
+      <h2 class="section-title">Aviation <span>Instructors</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Our faculty brings real airline cockpit and maintenance floor experience into every classroom session.</p>
+    </div>
+
+    <div class="faculty-grid">
+
+      <!-- Gp. Capt. S M Sundaram -->
+      <div class="faculty-card fade-in">
+        <div class="faculty-img-wrap" style="height:320px;">
+          <img loading="lazy" src="images/faculty-sundaram.jpg" alt="Gp. Capt. S M Sundaram (Retd)" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="faculty-img-placeholder" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <span class="faculty-badge">Managing Director</span>
+        </div>
+        <div class="faculty-body">
+          <h3 class="faculty-name">Gp. Capt. S M Sundaram (Retd)</h3>
+          <p class="faculty-role">Managing Director</p>
+          <p class="faculty-desc">Group Captain SM Sundaram (Retd.) is a highly accomplished aviation professional with extensive experience in military and civil aviation. A graduate of the National Defense Academy, he was commissioned into the Indian Air Force as a Navigator, accumulating over 6,500 flight hours on aircraft such as the Boeing 737, HS 748 (Avro), and DC-3 (Dakota).</p>
+          <div class="faculty-extra" id="extra-sundaram">
+            <p class="faculty-desc">An instructor since 1984, GpCapt Sundaram is a postgraduate from Madras University and an alumnus of the Defense Services Staff College (DSSC), where he also served as a Directing Staff (Instructor), showcasing his leadership and expertise in training.</p>
+            <p class="faculty-desc">After retiring from the Air Force, he transitioned into civil aviation as the General Manager – Training and Chief Ground Instructor (CGI) with Blue Dart Aviation Ltd. In this role, he conducted Type Rating Ground Training and Recurrent Ground Training for pilots and flight dispatchers on aircraft including the ATR, Boeing 737, and Boeing 757-200. He is also a certified Performance Software Engineer, trained by MS Boeing, and specialized in advanced operations such as PBN (Performance-Based Navigation), RVSM (Reduced Vertical Separation Minimum), and CAT II &amp; III Operations.</p>
+            <p class="faculty-desc">With a wealth of knowledge and experience, GpCapt Sundaram is dedicated to training the next generation of aviators. He offers comprehensive programs for ab-initio pilots preparing for CPL examinations and advanced training for experienced CPL holders pursuing ATPL certifications.</p>
+          </div>
+          <button class="btn-read-more" onclick="toggleReadMore(this,'extra-sundaram')">Read More ▾</button>
+        </div>
+      </div>
+
+      <!-- Gp. Capt. Ranjit Isaac -->
+      <div class="faculty-card fade-in">
+        <div class="faculty-img-wrap" style="height:320px;">
+          <img loading="lazy" src="images/faculty-isaac.jpg" alt="Gp. Capt. Ranjit Isaac (Retd)" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="faculty-img-placeholder" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <span class="faculty-badge">General Manager</span>
+        </div>
+        <div class="faculty-body">
+          <h3 class="faculty-name">Gp. Capt. Ranjit Isaac (Retd)</h3>
+          <p class="faculty-role">General Manager</p>
+          <p class="faculty-desc">An accomplished aerospace professional, Group Captain Ranjit Isaac (Retd) brings a wealth of experience across both military and civil aviation domains. With a distinguished career that includes responsibility for maintaining the prestigious Air Force One fleet — entrusted with flying the Honourable President, Prime Minister, and other VVIPs of India.</p>
+          <div class="faculty-extra" id="extra-isaac">
+            <p class="faculty-desc">He possesses hands-on expertise with both rotary-wing and fixed-wing aircraft, having overseen everything from aircraft and aero-engine production lines to testing and delivery as Production Head. Beyond engineering, he has played a pivotal role in human capital development, serving as the Commanding Officer of an aviation training facility and as the Training Manager for a scheduled airline.</p>
+            <p class="faculty-desc">In the private sector, he functioned as Project Head with one of India's largest industrial houses, contributing to the government's "Make in India" initiative. As the head of strategy and business development for the Aerospace vertical at Reliance Defence Ltd., he gained deep insight into the commercial and strategic facets of aerospace manufacturing and partnerships.</p>
+            <p class="faculty-desc">A certified aerospace quality assurance and audit professional, he upholds the highest standards in safety and performance. His career stands as a testament to the power of technical leadership, national service, and strategic vision in advancing the aerospace sector.</p>
+          </div>
+          <button class="btn-read-more" onclick="toggleReadMore(this,'extra-isaac')">Read More ▾</button>
+        </div>
+      </div>
+
+      <!-- Capt. S. Srinivasan -->
+      <div class="faculty-card fade-in">
+        <div class="faculty-img-wrap" style="height:320px;">
+          <img loading="lazy" src="images/faculty-srinivasan.jpg" alt="Capt. S. Srinivasan" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="faculty-img-placeholder" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <span class="faculty-badge">Senior Training Manager</span>
+        </div>
+        <div class="faculty-body">
+          <h3 class="faculty-name">Capt. S. Srinivasan</h3>
+          <p class="faculty-role">Senior Training Manager</p>
+          <p class="faculty-desc">An aviator with a lifelong passion for flying and a deep commitment to excellence in aviation. His career began in the Indian Air Force, where he flew iconic aircraft including the HT-2, HPT 32, HJT 16, Dakota DC-3, Avro (HS-748), and Antonov AN-32, accumulating over 15,800 total flying hours.</p>
+          <div class="faculty-extra" id="extra-srinivasan">
+            <p class="faculty-desc">Transitioning into civil aviation, he expanded his expertise to include the Beechcraft B-200, ATR 42-320/500, and Airbus A320, gaining deep insights into the dynamic world of commercial flight operations.</p>
+            <p class="faculty-desc">As a Designated Examiner, he has been entrusted with assessing and certifying fellow pilots to the highest standards of safety and professionalism. As a Crew Resource Management (CRM) Facilitator, he fosters effective communication among flight teams, emphasizing the human element of aviation safety. As an experienced Simulator Instructor, he trains pilots in handling complex scenarios, instilling confidence and preparedness for the unexpected.</p>
+            <p class="faculty-desc">He is ever ready to share his knowledge and experience with budding aviators who dream to fly higher and faster — always.</p>
+          </div>
+          <button class="btn-read-more" onclick="toggleReadMore(this,'extra-srinivasan')">Read More ▾</button>
+        </div>
+      </div>
+
+      <!-- Capt. J Jenesh Jeffrey -->
+      <div class="faculty-card fade-in">
+        <div class="faculty-img-wrap" style="height:320px;">
+          <img loading="lazy" src="images/faculty-jeffrey.jpg" alt="Capt. J Jenesh Jeffrey" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="faculty-img-placeholder" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <span class="faculty-badge">Training Manager</span>
+        </div>
+        <div class="faculty-body">
+          <h3 class="faculty-name">Capt. J Jenesh Jeffrey</h3>
+          <p class="faculty-role">Training Manager</p>
+          <p class="faculty-desc">Jenesh is a dedicated aviation professional with extensive experience in the industry. After completing his CPL and Flight Instructor Rating in the USA in 2016, he earned a BBA in Aviation from Bharathiar University. With a strong foundation in aviation and airline experience, Jenesh is passionate about advancing aviation excellence and shaping the next generation of pilots.</p>
+        </div>
+      </div>
+
+      <!-- Prashant Bansode -->
+      <div class="faculty-card fade-in">
+        <div class="faculty-img-wrap" style="height:320px;">
+          <img loading="lazy" src="images/faculty-bansode.jpg" alt="Mr. Prashant Bansode" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="faculty-img-placeholder" style="display:none;"><i class="fas fa-user-tie"></i></div>
+          <span class="faculty-badge">Senior Aviation Instructor</span>
+        </div>
+        <div class="faculty-body">
+          <h3 class="faculty-name">Mr. Prashant Bansode</h3>
+          <p class="faculty-role">Senior Aviation Instructor | Aircraft Maintenance Engineer</p>
+          <p class="faculty-desc">Mr. Prashant Bansode is a highly experienced Aircraft Maintenance Engineer and Aviation Technical Instructor with more than 35 years in the aviation industry. He holds a DGCA AME License (Category V – Avionics) and a valid EASA B2 License from CAA, UK, with type ratings on Airbus A319, A320, and A321.</p>
+          <div class="faculty-extra" id="extra-bansode">
+            <p class="faculty-desc">He has extensive experience delivering aviation technical training covering RVSM, PBN, ADS-B, EWIS, FTS, CAR-M, CAR-145, CAR-66, CAR-147, Human Factors, EGPWS, TCAS, CVR, DFDR, Safety Management Systems (SMS), ETOPS, Data Analysis, and Accident/Incident Investigation.</p>
+            <p class="faculty-desc">At Vajra Aviation, he conducts EASA Part-66 modular training for Modules 3, 4, 5, 7, 9, 11, 13, 14, and 15, ensuring students gain strong technical knowledge and exam-oriented preparation. He has also delivered A320 family technical type training courses for pilots.</p>
+            <p class="faculty-desc">With decades of practical aviation experience and a passion for mentoring, Mr. Bansode plays a key role in supporting students toward achieving EASA Aircraft Maintenance Engineer certification.</p>
+          </div>
+          <button class="btn-read-more" onclick="toggleReadMore(this,'extra-bansode')">Read More ▾</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY OUR FACULTY ===== -->
+<section class="why-faculty">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Our Strength</span>
+      <h2 class="section-title">Why Our Faculty <span>Stands Out</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Every instructor at Vajra Aviation is handpicked for their industry credentials and passion for teaching.</p>
+    </div>
+    <div class="why-faculty-grid">
+      <div class="why-card fade-in">
+        <div class="why-icon"><i class="fas fa-fighter-jet"></i></div>
+        <h3>Ex-IAF Officers</h3>
+        <p>Our founding instructors served in the Indian Air Force, bringing unmatched discipline, precision, and military-grade aviation expertise.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon"><i class="fas fa-certificate"></i></div>
+        <h3>DGCA Certified</h3>
+        <p>All faculty hold valid DGCA, EASA, or internationally recognized licenses ensuring instruction meets the highest regulatory standards.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon"><i class="fas fa-industry"></i></div>
+        <h3>Real Industry Experience</h3>
+        <p>Every instructor has hands-on airline, MRO, or airport operations experience — not just textbook knowledge.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon"><i class="fas fa-user-graduate"></i></div>
+        <h3>Student-First Mentors</h3>
+        <p>Beyond teaching, our faculty guides students on career paths, exam strategies, and industry connections for life after Vajra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text fade-in-left">
+        <h2>Learn from India's Best Aviation Instructors</h2>
+        <p>Get guidance from Ex-IAF officers and certified aviation professionals.</p>
+      </div>
+      <div class="cta-btns fade-in-right">
+        <a href="contact" class="btn btn-gold btn-lg">Enquire Now <i class="fas fa-arrow-right"></i></a>
+        <a href="https://wa.me/918111086614" target="_blank" class="btn btn-outline-white btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="images/logo-footer.png" alt="Vajra Aviation" class="logo-img" style="height:60px;" onerror="this.style.display='none'" />
+          <div class="logo-text">
+            <span class="brand-name">VAJRA</span>
+            <span class="brand-sub">Aviation Private Limited</span>
+          </div>
+        </a>
+        <p class="footer-desc">Vajra Aviation Private Limited — Bangalore's premier aviation training institute founded by Ex-IAF officers. ISO 9001:2015 certified.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/918111086614" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Our Courses</h4>
+        <ul class="footer-links">
+          <li><a href="course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a></li>
+          <li><a href="course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a></li>
+          <li><a href="course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a></li>
+          <li><a href="course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a></li>
+          <li><a href="course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew Training</a></li>
+          <li><a href="course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a></li>
+          <li><a href="courses"><i class="fas fa-th-list"></i> View All Courses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Our Faculty</a></li>
+          <li><a href="placements"><i class="fas fa-briefcase"></i> Placements</a></li>
+          <li><a href="blog"><i class="fas fa-blog"></i> Blog &amp; Articles</a></li>
+          <li><a href="faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <li><a href="contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li><a href="privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+916364919234">6364919234 (Admissions)</a></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/918111086614" target="_blank">8111086614 (WhatsApp)</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919840920090">9840920090</a></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>NO.95, Third Floor, G R Arcade, Sector-C, Amrutha Nagar, Bangalore – 560092</span></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+        <div style="margin-top:16px;">
+          <h4 class="footer-heading">Our Partners</h4>
+          <ul class="footer-links">
+            <li><a href="https://aviotrace.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> Aviotrace Swiss</a></li>
+            <li><a href="https://www.ianzl.com" target="_blank" rel="noopener"><i class="fas fa-handshake"></i> IANZL – New Zealand</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vajra Aviation Private Limited. All Rights Reserved. | ISO 9001:2015 Certified</p>
+      <div class="footer-bottom-links">
+        <a href="privacy">Privacy Policy</a>
+        <a href="contact">Contact</a>
+        <a href="sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  <a href="https://wa.me/918111086614?text=Hi%2C%20I%20want%20to%20know%20more%20about%20aviation%20courses%20at%20Vajra%20Aviation." target="_blank" class="whatsapp-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js" defer></script>
+<script>
+function toggleReadMore(btn, id) {
+  var el = document.getElementById(id);
+  var isOpen = el.classList.toggle('open');
+  btn.textContent = isOpen ? 'Read Less ▴' : 'Read More ▾';
+}
+</script>
+</body>
+</html>
