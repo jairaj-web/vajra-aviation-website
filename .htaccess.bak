@@ -16,7 +16,9 @@ RewriteCond %{HTTP_HOST} ^www\.vajraaviation\.com [NC]
 RewriteRule ^(.*)$ https://vajraaviation.com/$1 [L,R=301]
 
 # ── LITESPEED CACHE CONTROL ────────────────────────────────
-# LiteSpeed caching handled by mod_expires and mod_headers below
+<IfModule LiteSpeed>
+  RewriteRule .* - [E=Cache-Control:no-cache]
+</IfModule>
 
 # ── CLEAN URLs (remove .html extension) ────────────────────
 # Redirect .html requests to clean URL (301 permanent)
@@ -81,9 +83,11 @@ RewriteRule ^(.*)/$ /$1 [R=301,L]
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
-  # Cache-Control for HTML - 1 hour
+  # Cache-Control for HTML - no CDN caching, always fresh
   <FilesMatch "\.html$">
-    Header set Cache-Control "public, max-age=3600"
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
   </FilesMatch>
 </IfModule>
 
