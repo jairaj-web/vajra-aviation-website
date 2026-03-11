@@ -107,10 +107,10 @@ btn.disabled   = true;
 const data = new FormData(this);
 // Add source page
 data.append('source', document.title);
-fetch('/submit-form.php', { method: 'POST', body: data })
+fetch('https://formspree.io/f/mdaweqvn', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
 .then(r => r.json())
 .then(res => {
-if (res.success) {
+if (res.ok) {
 btn.innerHTML      = '<i class="fas fa-check"></i> Message Sent!';
 btn.style.background = '#2ECC71';
 this.reset();
