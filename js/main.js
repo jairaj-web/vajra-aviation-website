@@ -101,19 +101,43 @@ document.querySelectorAll('.contact-form').forEach(form => {
 form.addEventListener('submit', function(e) {
 e.preventDefault();
 const btn      = this.querySelector('.btn-submit');
-const original = btn.textContent;
-btn.textContent = 'Sending...';
-btn.disabled    = true;
+const original = btn.innerHTML;
+btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+btn.disabled   = true;
+const data = new FormData(this);
+// Add source page
+data.append('source', document.title);
+fetch('/submit-form.php', { method: 'POST', body: data })
+.then(r => r.json())
+.then(res => {
+if (res.success) {
+btn.innerHTML      = '<i class="fas fa-check"></i> Message Sent!';
+btn.style.background = '#2ECC71';
+this.reset();
 setTimeout(() => {
-btn.textContent       = '✓ Message Sent!';
-btn.style.background  = '#2ECC71';
-setTimeout(() => {
-btn.textContent      = original;
+btn.innerHTML      = original;
 btn.style.background = '';
-btn.disabled         = false;
-form.reset();
-}, 3000);
-}, 1200);
+btn.disabled       = false;
+}, 4000);
+} else {
+btn.innerHTML      = '<i class="fas fa-exclamation-triangle"></i> Error — Please Call Us';
+btn.style.background = '#e74c3c';
+btn.disabled       = false;
+setTimeout(() => {
+btn.innerHTML      = original;
+btn.style.background = '';
+}, 4000);
+}
+})
+.catch(() => {
+btn.innerHTML      = '<i class="fas fa-exclamation-triangle"></i> Error — Please Call Us';
+btn.style.background = '#e74c3c';
+btn.disabled       = false;
+setTimeout(() => {
+btn.innerHTML      = original;
+btn.style.background = '';
+}, 4000);
+});
 });
 });
 document.querySelector('.hero-bg')?.classList.add('loaded');
