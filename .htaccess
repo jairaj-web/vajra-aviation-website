@@ -23,11 +23,15 @@ RewriteRule ^(.*)$ https://vajraaviation.com/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} \s/+(.*?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
+# ── REMOVE TRAILING SLASH (avoid duplicate URLs) ───────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
 # Internally serve the .html file for clean URL requests
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
+RewriteRule ^(.+)$ $1.html [L]
 
 # Old faculty/classroom URLs (keep working)
 RewriteRule ^faculty$ /facility-faculty [R=301,L]
@@ -62,10 +66,6 @@ RewriteRule ^classroom$ /facility-classroom [R=301,L]
   ExpiresByType font/woff2                 "access plus 1 year"
   ExpiresByType font/woff                  "access plus 1 year"
 </IfModule>
-
-# ── REMOVE TRAILING SLASH (avoid duplicate URLs) ───────────
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [R=301,L]
 
 # ── SECURITY HEADERS ───────────────────────────────────────
 <IfModule mod_headers.c>
