@@ -107,6 +107,7 @@
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
+    "@id": "https://vajraaviation.com/#organization",
     "name": "Vajra Aviation Private Limited",
     "url": "https://vajraaviation.com",
     "logo": {
@@ -170,6 +171,23 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-WGZ32SNYZQ');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://vajraaviation.com/#website",
+    "url": "https://vajraaviation.com",
+    "name": "Vajra Aviation",
+    "description": "Premier aviation training institute in Bangalore. CPL, EASA Part 66, ATPL, Cabin Crew, DGCA AME courses by Ex-IAF officers.",
+    "publisher": {"@id": "https://vajraaviation.com/#organization"},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {"@type": "EntryPoint", "urlTemplate": "https://vajraaviation.com/?s={search_term_string}"},
+      "query-input": "required name=search_term_string"
+    }
+  }
   </script>
 </head>
 <body>

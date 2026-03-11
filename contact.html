@@ -33,13 +33,22 @@
   <meta name="twitter:title" content="Contact Vajra Aviation | Admissions Bangalore" />
   <meta name="twitter:description" content="Get in touch for aviation course admissions. Call 6364919234 / 8111086614. Amrutha Nagar, Bangalore 560092." />
 
-  <script type="application/ld+json">
+  
+
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
+    "@type": ["EducationalOrganization", "LocalBusiness"],
+    "@id": "https://vajraaviation.com/#organization",
     "name": "Vajra Aviation Private Limited",
     "url": "https://vajraaviation.com",
-    "logo": "https://vajraaviation.com/images/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vajraaviation.com/images/logo.png",
+      "width": 180,
+      "height": 60
+    },
+    "image": "https://vajraaviation.com/images/logo.png",
     "description": "Premier aviation training institute in Bangalore offering CPL, ATPL, EASA Part 66, DGCA AME, Cabin Crew and Flight Dispatcher courses. Founded by Ex-IAF officers. ISO 9001:2015 certified.",
     "telephone": ["+916364919234", "+918111086614", "+919840920090"],
     "email": "info@vajraaviation.com",
@@ -53,8 +62,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "13.0631",
-      "longitude": "77.5673"
+      "latitude": 13.0631,
+      "longitude": 77.5673
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -62,19 +71,20 @@
       "opens": "09:00",
       "closes": "18:00"
     },
+    "priceRange": "$$",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+916364919234",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi", "Kannada"]
+    },
     "sameAs": [
       "https://www.facebook.com/vajraaviation",
       "https://www.instagram.com/vajraaviation",
       "https://www.linkedin.com/company/vajra-aviation",
       "https://www.youtube.com/@vajraaviation"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+916364919234",
-      "contactType": "admissions",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Kannada"]
-    }
+    ]
   }
   </script>
 
@@ -147,9 +157,7 @@
     @media (max-width: 900px) { .contact-cards-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) { .contact-cards-grid { grid-template-columns: 1fr; gap: 16px; } }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://vajraaviation.com","name":"Vajra Aviation Private Limited","image":"https://vajraaviation.com/images/logo.png?v=3","url":"https://vajraaviation.com","telephone":["+916364919234","+918111086614","+919840920090"],"email":"info@vajraaviation.com","address":{"@type":"PostalAddress","streetAddress":"NO.95, Third Floor, G R Arcade, Sector-C, Amrutha Nagar","addressLocality":"Bangalore","addressRegion":"Karnataka","postalCode":"560092","addressCountry":"IN"},"openingHours":"Mo-Sa 09:00-18:00","priceRange":"$$","description":"Premier aviation training institute in Bangalore offering CPL, ATPL, EASA Part 66, Cabin Crew and Flight Dispatcher courses by Ex-IAF officers.","sameAs":["https://facebook.com/vajraaviation","https://instagram.com/vajraaviation","https://linkedin.com/company/vajraaviation"]}
-  </script>
+  
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGZ32SNYZQ"></script>
   <script>
