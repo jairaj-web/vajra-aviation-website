@@ -48,8 +48,8 @@ RewriteRule ^classroom$ /facility-classroom [R=301,L]
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # HTML - 1 hour (so updates show quickly)
-  ExpiresByType text/html                  "access plus 1 hour"
+  # HTML - no cache (always fetch fresh from server)
+  ExpiresByType text/html                  "access plus 0 seconds"
 
   # CSS + JS - 1 year (filenames include version via ?v= or are static)
   ExpiresByType text/css                   "access plus 1 year"
@@ -81,9 +81,11 @@ RewriteRule ^classroom$ /facility-classroom [R=301,L]
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
-  # Cache-Control for HTML - 1 hour
+  # Cache-Control for HTML - no cache (always fetch fresh)
   <FilesMatch "\.html$">
-    Header set Cache-Control "public, max-age=3600"
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
   </FilesMatch>
 </IfModule>
 
