@@ -1,4 +1,27 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow AI search crawlers for GEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Block pure training crawlers (not used for AI search)
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 Sitemap: https://vajraaviation.com/sitemap.xml
