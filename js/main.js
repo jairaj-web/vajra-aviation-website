@@ -97,6 +97,7 @@ answer?.classList.add('open');
 }
 });
 });
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx7-vM2RwiwKDSbhM1uSSWlT36uqoR5jE7pvxoAMZM4pPrck7kyo4mKY_JFibi5R0MF/exec';
 document.querySelectorAll('.contact-form').forEach(form => {
 form.addEventListener('submit', function(e) {
 e.preventDefault();
@@ -105,12 +106,31 @@ const original = btn.innerHTML;
 btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 btn.disabled   = true;
 const data = new FormData(this);
-// Add source page
 data.append('source', document.title);
-fetch('https://formspree.io/f/mdaweqvn', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-.then(r => r.json())
-.then(res => {
-if (res.ok) {
+// Hidden iframe trick — bypasses CORS and redirect issues with Google Apps Script
+const iframeName = 'gs_iframe_' + Date.now();
+const iframe = document.createElement('iframe');
+iframe.name = iframeName;
+iframe.style.display = 'none';
+document.body.appendChild(iframe);
+const tempForm = document.createElement('form');
+tempForm.method = 'GET';
+tempForm.action = FORM_ENDPOINT;
+tempForm.target = iframeName;
+tempForm.style.display = 'none';
+for (const [key, value] of data.entries()) {
+const input = document.createElement('input');
+input.type = 'hidden';
+input.name = key;
+input.value = value;
+tempForm.appendChild(input);
+}
+document.body.appendChild(tempForm);
+tempForm.submit();
+setTimeout(() => {
+document.body.removeChild(tempForm);
+document.body.removeChild(iframe);
+}, 5000);
 btn.innerHTML      = '<i class="fas fa-check"></i> Message Sent!';
 btn.style.background = '#2ECC71';
 this.reset();
@@ -119,25 +139,6 @@ btn.innerHTML      = original;
 btn.style.background = '';
 btn.disabled       = false;
 }, 4000);
-} else {
-btn.innerHTML      = '<i class="fas fa-exclamation-triangle"></i> Error — Please Call Us';
-btn.style.background = '#e74c3c';
-btn.disabled       = false;
-setTimeout(() => {
-btn.innerHTML      = original;
-btn.style.background = '';
-}, 4000);
-}
-})
-.catch(() => {
-btn.innerHTML      = '<i class="fas fa-exclamation-triangle"></i> Error — Please Call Us';
-btn.style.background = '#e74c3c';
-btn.disabled       = false;
-setTimeout(() => {
-btn.innerHTML      = original;
-btn.style.background = '';
-}, 4000);
-});
 });
 });
 document.querySelector('.hero-bg')?.classList.add('loaded');
