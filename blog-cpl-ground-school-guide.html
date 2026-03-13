@@ -182,6 +182,53 @@
  </div>
 </header>
 
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo">
+      <img src="/images/logo.webp" alt="Vajra Aviation" class="logo-img" style="height:38px;" width="114" height="38" onerror="this.style.display='none'" />
+      <div class="logo-text">
+        <span class="brand-name" style="font-size:16px;">VAJRA</span>
+        <span class="brand-sub">Aviation Pvt Ltd</span>
+      </div>
+    </a>
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/courses" class="mobile-nav-link" data-submenu="coursesSub">Courses <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="coursesSub">
+      <a href="/course-cpl"><i class="fas fa-plane-departure"></i> CPL Ground School</a>
+      <a href="/course-atpl"><i class="fas fa-plane"></i> ATPL Ground School</a>
+      <a href="/course-easa-part-66"><i class="fas fa-tools"></i> EASA Part 66</a>
+      <a href="/course-flight-dispatcher"><i class="fas fa-broadcast-tower"></i> Flight Dispatcher</a>
+      <a href="/course-cabin-crew"><i class="fas fa-user-tie"></i> Cabin Crew</a>
+      <a href="/course-dgca-ame"><i class="fas fa-cog"></i> DGCA AME Training</a>
+      <a href="/course-radio-telephony"><i class="fas fa-headset"></i> Radio Telephony</a>
+    </div>
+    <a href="/about" class="mobile-nav-link">About Us</a>
+    <a class="mobile-nav-link" data-submenu="facilitySub">Facility <i class="fas fa-chevron-down"></i></a>
+    <div class="mobile-submenu" id="facilitySub">
+      <a href="/facility-faculty"><i class="fas fa-chalkboard-teacher"></i> Our Team</a>
+      <a href="/facility-classroom"><i class="fas fa-school"></i> Class Room</a>
+    </div>
+    <a href="/placements" class="mobile-nav-link">Placements</a>
+    <a href="/faq" class="mobile-nav-link">FAQ</a>
+    <a href="/blog" class="mobile-nav-link">Blog</a>
+    <a href="/egca-services" class="mobile-nav-link">eGCA Services</a>
+    <a href="/contact" class="mobile-nav-link">Contact Us</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-contact-item"><i class="fas fa-phone"></i><span>6364919234 / 8111086614</span></div>
+    <div class="mobile-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
+    <div class="mobile-contact-item"><i class="fas fa-map-marker-alt"></i><span>Amrutha Nagar, Bangalore - 560092</span></div>
+    <a href="/contact" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:16px;">
+      <i class="fas fa-paper-plane"></i> Enquire Now
+    </a>
+  </div>
+</div>
+
 <!-- Article Hero -->
 <section class="article-hero">
  <div class="container">
@@ -708,6 +755,17 @@
  </div>
 </footer>
 <div id="backTop" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+<!-- ===== WHATSAPP FLOAT ===== -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  <a href="https://wa.me/918111086614?text=Hi%2C%20I%20want%20to%20know%20more%20about%20aviation%20courses%20at%20Vajra%20Aviation." target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
 <script src="/js/main.js?v=2" defer></script>
 </body>
 </html>
