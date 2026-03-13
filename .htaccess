@@ -112,4 +112,4 @@ RewriteCond %{HTTP_REFERER} !^https://(www\.)?vajraaviation\.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
 
 # ── ERROR PAGES ────────────────────────────────────────────
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
