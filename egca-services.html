@@ -244,11 +244,15 @@
     .contact-method i { font-size: 20px; color: var(--navy); width: 24px; text-align: center; }
     .contact-method strong { display: block; font-size: 13px; color: var(--gray); font-weight: 500; }
     .contact-method span { font-size: 15px; font-weight: 600; }
+    .pricing-cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .contact-cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
     @media (max-width: 768px) {
       .service-hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .services-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .package-card { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
+      .pricing-cards-grid { grid-template-columns: 1fr; }
+      .contact-cta-grid { grid-template-columns: 1fr; gap: 32px; }
     }
   </style>
 </head>
@@ -457,7 +461,7 @@
       <div class="section-divider"></div>
       <p class="section-desc">Clear, upfront pricing for all eGCA and DGCA application support services.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;" class="fade-in">
+    <div class="pricing-cards-grid fade-in">
 
       <!-- Box 1 -->
       <div style="background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--light-gray);">
@@ -662,7 +666,7 @@
 <!-- ===== CONTACT CTA ===== -->
 <section class="section-pad" style="background:var(--navy-dark);">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;" class="fade-in">
+    <div class="contact-cta-grid fade-in">
       <div>
         <span class="section-label" style="color:var(--gold-light);">Get in Touch</span>
         <h2 style="color:var(--white);font-size:32px;margin:12px 0 16px;">Ready to Keep Your Licence <span style="color:var(--gold-light);">Compliant?</span></h2>
