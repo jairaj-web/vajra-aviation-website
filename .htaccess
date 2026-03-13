@@ -18,6 +18,22 @@ RewriteRule ^(.*)$ https://vajraaviation.com/$1 [L,R=301]
 # ── LITESPEED CACHE CONTROL ────────────────────────────────
 # LiteSpeed caching handled by mod_expires and mod_headers below
 
+# ── OLD WORDPRESS URL REDIRECTS (must be before trailing slash rule) ──
+RewriteRule ^easa-part-66-training-india/?$ /course-easa-part-66 [R=301,L]
+RewriteRule ^easa-part-66-j/?$ /course-easa-part-66 [R=301,L]
+RewriteRule ^graduate-engineering-training/?$ /course-graduate-engineering [R=301,L]
+RewriteRule ^charter-services/?$ / [R=301,L]
+RewriteRule ^luxury-aviation-tailored-solutions-for-need-premier-services/?$ / [R=301,L]
+RewriteRule ^redefining-luxury-the-private-jet-experience-like-never-before/?$ / [R=301,L]
+RewriteRule ^redefining-luxury-the-private-jet-experience-like-never-before-copy-copy/?$ / [R=301,L]
+RewriteRule ^behind-the-scenes-of-private-jet-we-make-your-flight-seamless/?$ / [R=301,L]
+RewriteRule ^the-safest-way-to-fly-why-private-jets-are-the-future-of-secure-travel/?$ / [R=301,L]
+RewriteRule ^skip-the-crowds-fly-in-comfort-the-freedom-of-private-jet-travel/?$ / [R=301,L]
+RewriteRule ^flying-private-is-the-new-standard-of-comfort/?$ / [R=301,L]
+RewriteRule ^tag/.*$ /blog [R=301,L]
+RewriteRule ^category/.*$ /blog [R=301,L]
+RewriteRule ^author/.*$ /about [R=301,L]
+
 # ── CLEAN URLs (remove .html extension) ────────────────────
 # Redirect .html requests to clean URL (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+(.*?)\.html[\s?] [NC]
@@ -36,6 +52,7 @@ RewriteRule ^(.+)$ $1.html [L]
 # Old faculty/classroom URLs (keep working)
 RewriteRule ^faculty$ /facility-faculty [R=301,L]
 RewriteRule ^classroom$ /facility-classroom [R=301,L]
+
 
 # ── COMPRESSION (Gzip) ─────────────────────────────────────
 <IfModule mod_deflate.c>
