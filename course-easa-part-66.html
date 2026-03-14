@@ -365,20 +365,25 @@
               h.classList.remove('active');
               if (h.nextElementSibling) h.nextElementSibling.classList.remove('open');
             });
-            var items = document.querySelectorAll('[data-cat="' + cat + '"]');
-            var lastItem = null;
+            var items = document.querySelectorAll('[data-cat="' + cat + '"], [data-cats]');
+            var matched = [];
             items.forEach(function(item) {
-              item.style.border = '2px solid var(--gold)';
-              item.style.boxShadow = '0 0 16px rgba(200,148,58,0.35)';
-              lastItem = item;
+              var cats = item.getAttribute('data-cats') || item.getAttribute('data-cat') || '';
+              if (cats.indexOf(cat) !== -1) {
+                item.style.border = '2px solid var(--gold)';
+                item.style.boxShadow = '0 0 16px rgba(200,148,58,0.35)';
+                matched.push(item);
+              }
             });
+            var lastItem = matched[matched.length - 1];
             if (lastItem) {
               var h = lastItem.querySelector('.accordion-header');
               if (h) {
                 h.classList.add('active');
                 if (h.nextElementSibling) h.nextElementSibling.classList.add('open');
               }
-              lastItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              // Scroll to first highlighted item
+              matched[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
           }
           </script>
@@ -395,7 +400,7 @@
           <h2><i class="fas fa-book-open"></i> Curriculum — 22 EASA Modules</h2>
           <p style="margin-bottom:20px;">The EASA Part 66 syllabus covers 22 modules from mathematics to propeller systems. All modules are covered in our programme:</p>
 
-          <div class="accordion-item" data-cat="b11">
+          <div class="accordion-item" data-cats="b11 b13">
             <div class="accordion-header">Modules M1–M5: Fundamental Sciences <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -408,7 +413,7 @@
             </div>
           </div>
 
-          <div class="accordion-item" data-cat="b11">
+          <div class="accordion-item" data-cats="b11 b13">
             <div class="accordion-header">Modules M6–M9: Structures, Maintenance &amp; Regulations <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -420,7 +425,7 @@
             </div>
           </div>
 
-          <div class="accordion-item" data-cat="b11">
+          <div class="accordion-item" data-cats="b11 b13">
             <div class="accordion-header">Module M10: Aviation Legislation <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
