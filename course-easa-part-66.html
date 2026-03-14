@@ -332,25 +332,56 @@
 
           <!-- Category Cards -->
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;">
-            <div style="background:var(--navy);color:var(--white);border-radius:var(--radius-lg);padding:24px;text-align:center;">
+            <div onclick="showModules('b11')" style="background:var(--navy);color:var(--white);border-radius:var(--radius-lg);padding:24px;text-align:center;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
               <i class="fas fa-plane" style="font-size:28px;color:var(--gold-light);margin-bottom:12px;display:block;"></i>
               <div style="font-size:18px;font-weight:800;margin-bottom:4px;">B1.1</div>
               <div style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:600;">Aeroplane Turbine</div>
               <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:8px;">Jet airliner maintenance</div>
+              <div style="font-size:10px;color:var(--gold-light);margin-top:10px;font-weight:600;">Click to view modules ↓</div>
             </div>
-            <div style="background:var(--navy);color:var(--white);border-radius:var(--radius-lg);padding:24px;text-align:center;">
+            <div onclick="showModules('b13')" style="background:var(--navy);color:var(--white);border-radius:var(--radius-lg);padding:24px;text-align:center;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
               <i class="fas fa-helicopter" style="font-size:28px;color:var(--gold-light);margin-bottom:12px;display:block;"></i>
               <div style="font-size:18px;font-weight:800;margin-bottom:4px;">B1.3</div>
               <div style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:600;">Helicopter Turbine</div>
               <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:8px;">Turbine helicopter systems</div>
+              <div style="font-size:10px;color:var(--gold-light);margin-top:10px;font-weight:600;">Click to view modules ↓</div>
             </div>
-            <div style="background:var(--gold);color:var(--white);border-radius:var(--radius-lg);padding:24px;text-align:center;">
+            <div onclick="showModules('b2')" style="background:var(--gold);color:var(--white);border-radius:var(--radius-lg);padding:24px;text-align:center;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
               <i class="fas fa-satellite-dish" style="font-size:28px;color:rgba(255,255,255,0.9);margin-bottom:12px;display:block;"></i>
               <div style="font-size:18px;font-weight:800;margin-bottom:4px;">B2</div>
               <div style="font-size:12px;color:rgba(255,255,255,0.85);font-weight:600;">Avionics</div>
               <div style="font-size:11px;color:rgba(255,255,255,0.7);margin-top:8px;">Electronics &amp; avionics systems</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.9);margin-top:10px;font-weight:600;">Click to view modules ↓</div>
             </div>
           </div>
+
+          <script>
+          function showModules(cat) {
+            document.querySelectorAll('.accordion-item').forEach(function(item) {
+              item.style.border = '';
+              item.style.boxShadow = '';
+            });
+            document.querySelectorAll('.accordion-header').forEach(function(h) {
+              h.classList.remove('active');
+              if (h.nextElementSibling) h.nextElementSibling.classList.remove('open');
+            });
+            var items = document.querySelectorAll('[data-cat="' + cat + '"]');
+            var lastItem = null;
+            items.forEach(function(item) {
+              item.style.border = '2px solid var(--gold)';
+              item.style.boxShadow = '0 0 16px rgba(200,148,58,0.35)';
+              lastItem = item;
+            });
+            if (lastItem) {
+              var h = lastItem.querySelector('.accordion-header');
+              if (h) {
+                h.classList.add('active');
+                if (h.nextElementSibling) h.nextElementSibling.classList.add('open');
+              }
+              lastItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+          </script>
 
           <!-- Ex-IAF Special -->
           <div style="background:linear-gradient(135deg,#1a3a5c,#2a5080);border-radius:var(--radius-lg);padding:24px;margin-top:20px;border-left:4px solid var(--gold);">
@@ -364,7 +395,7 @@
           <h2><i class="fas fa-book-open"></i> Curriculum — 22 EASA Modules</h2>
           <p style="margin-bottom:20px;">The EASA Part 66 syllabus covers 22 modules from mathematics to propeller systems. All modules are covered in our programme:</p>
 
-          <div class="accordion-item">
+          <div class="accordion-item" data-cat="b11">
             <div class="accordion-header">Modules M1–M5: Fundamental Sciences <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -377,7 +408,7 @@
             </div>
           </div>
 
-          <div class="accordion-item">
+          <div class="accordion-item" data-cat="b11">
             <div class="accordion-header">Modules M6–M9: Structures, Maintenance &amp; Regulations <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -389,7 +420,7 @@
             </div>
           </div>
 
-          <div class="accordion-item">
+          <div class="accordion-item" data-cat="b11">
             <div class="accordion-header">Module M10: Aviation Legislation <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -402,7 +433,7 @@
             </div>
           </div>
 
-          <div class="accordion-item">
+          <div class="accordion-item" data-cat="b11" id="acc-b11-last">
             <div class="accordion-header">Modules M11–M15–M17: Aeroplane Turbine Systems (B1.1) <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -413,7 +444,7 @@
             </div>
           </div>
 
-          <div class="accordion-item">
+          <div class="accordion-item" data-cat="b13" id="acc-b13-last">
             <div class="accordion-header">Modules M12–M15: Helicopter &amp; Turbine Engines (B1.3) <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
@@ -424,8 +455,8 @@
             </div>
           </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header">Modules M13–M14: Avionics (B2) <i class="fas fa-chevron-down"></i></div>
+          <div class="accordion-item" data-cat="b2">
+            <div class="accordion-header" id="acc-b2-last">Modules M13–M14: Avionics (B2) <i class="fas fa-chevron-down"></i></div>
             <div class="accordion-body">
               <ul>
                 <li><strong>M13</strong> — Aircraft Aerodynamics, Structures and Systems (Avionics B2)</li>
