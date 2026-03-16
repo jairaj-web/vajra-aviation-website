@@ -97,7 +97,7 @@ answer?.classList.add('open');
 }
 });
 });
-const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx7-vM2RwiwKDSbhM1uSSWlT36uqoR5jE7pvxoAMZM4pPrck7kyo4mKY_JFibi5R0MF/exec';
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx95tU3nQEgED-sU28aBeQj1_DM9cHgXAiV7iw7xUO_jTQBEVpvefRDwTAkx1mpFBI6/exec';
 document.querySelectorAll('.contact-form').forEach(form => {
 form.addEventListener('submit', function(e) {
 e.preventDefault();
