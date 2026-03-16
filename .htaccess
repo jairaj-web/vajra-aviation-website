@@ -54,6 +54,9 @@ RewriteRule ^faculty$ /facility-faculty [R=301,L]
 RewriteRule ^classroom$ /facility-classroom [R=301,L]
 RewriteRule ^about-us/?$ /about [R=301,L]
 RewriteRule ^about-us\.html$ /about [R=301,L]
+RewriteRule ^membership-pricing/?$ /contact [R=301,L]
+RewriteRule ^membership/?$ /contact [R=301,L]
+RewriteRule ^pricing/?$ /contact [R=301,L]
 
 
 # ── COMPRESSION (Gzip) ─────────────────────────────────────
