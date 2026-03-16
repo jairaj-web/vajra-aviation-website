@@ -107,7 +107,6 @@ btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 btn.disabled   = true;
 const data = new FormData(this);
 data.append('source', document.title);
-// Hidden iframe trick — bypasses CORS and redirect issues with Google Apps Script
 const iframeName = 'gs_iframe_' + Date.now();
 const iframe = document.createElement('iframe');
 iframe.name = iframeName;
