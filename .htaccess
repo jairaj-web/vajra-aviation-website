@@ -57,6 +57,7 @@ RewriteRule ^about-us\.html$ /about [R=301,L]
 RewriteRule ^membership-pricing/?$ /contact [R=301,L]
 RewriteRule ^membership/?$ /contact [R=301,L]
 RewriteRule ^pricing/?$ /contact [R=301,L]
+RewriteRule ^aircraft-sourcing-sales/?$ /egca-services [R=301,L]
 
 
 # ── COMPRESSION (Gzip) ─────────────────────────────────────
