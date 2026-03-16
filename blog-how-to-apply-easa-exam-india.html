@@ -419,6 +419,10 @@
     @media (max-width: 640px) {
       .article-content { padding: 28px 20px; }
       .step-card { flex-direction: column; gap: 12px; }
+      .related-blog-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 992px) {
+      .related-blog-grid { grid-template-columns: 1fr 1fr !important; }
     }
   </style>
 </head>
@@ -765,7 +769,7 @@
       <h2 class="section-title">You May Also <span>Find Useful</span></h2>
       <div class="section-divider"></div>
     </div>
-    <div class="blog-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="blog-grid related-blog-grid" style="grid-template-columns:repeat(3,1fr);">
       <div class="blog-card">
         <div class="blog-thumb" style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));">
           <i class="fas fa-tools"></i>
