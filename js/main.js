@@ -98,6 +98,7 @@ answer?.classList.add('open');
 });
 });
 const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx95tU3nQEgED-sU28aBeQj1_DM9cHgXAiV7iw7xUO_jTQBEVpvefRDwTAkx1mpFBI6/exec';
+const WEB3FORMS_KEY = '65857148-d828-4d3a-a009-8aa7cf996f55';
 document.querySelectorAll('.contact-form').forEach(form => {
 form.addEventListener('submit', function(e) {
 e.preventDefault();
@@ -107,6 +108,7 @@ btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 btn.disabled   = true;
 const data = new FormData(this);
 data.append('source', document.title);
+// 1. Google Sheets (iframe GET)
 const iframeName = 'gs_iframe_' + Date.now();
 const iframe = document.createElement('iframe');
 iframe.name = iframeName;
@@ -130,6 +132,22 @@ setTimeout(() => {
 document.body.removeChild(tempForm);
 document.body.removeChild(iframe);
 }, 5000);
+// 2. Web3Forms (email notification)
+const w3 = new FormData();
+w3.append('access_key', WEB3FORMS_KEY);
+w3.append('from_name', 'Vajra Aviation Website');
+w3.append('subject', 'New Enquiry: ' + (data.get('course') || 'Vajra Aviation') + ' — ' + (data.get('name') || ''));
+w3.append('name', data.get('name') || '');
+w3.append('email', data.get('email') || '');
+w3.append('message',
+  'Name: '    + (data.get('name')    || '-') + '\n' +
+  'Phone: '   + (data.get('phone')   || '-') + '\n' +
+  'Email: '   + (data.get('email')   || '-') + '\n' +
+  'Course: '  + (data.get('course')  || '-') + '\n' +
+  'Message: ' + (data.get('message') || '-') + '\n' +
+  'Page: '    + document.title
+);
+fetch('https://api.web3forms.com/submit', {method:'POST', body:w3});
 btn.innerHTML      = '<i class="fas fa-check"></i> Message Sent!';
 btn.style.background = '#2ECC71';
 this.reset();
