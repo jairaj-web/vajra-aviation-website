@@ -253,6 +253,9 @@
       box-shadow: 0 2px 12px rgba(7,29,54,0.08);
     }
     .comparison-table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       width: 100%;
       border-collapse: collapse;
       font-size: 14.5px;
@@ -586,6 +589,8 @@
       .article-cta-btns { flex-direction: column; align-items: stretch; }
       .article-cta-btns .btn { width: 100%; justify-content: center; }
     }
+      @media (max-width: 992px) { .related-blog-grid { grid-template-columns: 1fr 1fr !important; } }
+    @media (max-width: 640px) { .article-content { padding: 20px 16px; } .article-hero h1 { font-size: 24px; } .article-hero { padding: 48px 0 32px; } .step-card { flex-direction: column; gap: 12px; } .related-blog-grid { grid-template-columns: 1fr !important; } }
   </style>
 </head>
 <body>
