@@ -52,6 +52,8 @@ RewriteRule ^(.+)$ $1.html [L]
 # Old faculty/classroom URLs (keep working)
 RewriteRule ^faculty$ /facility-faculty [R=301,L]
 RewriteRule ^classroom$ /facility-classroom [R=301,L]
+RewriteRule ^about-us/?$ /about [R=301,L]
+RewriteRule ^about-us\.html$ /about [R=301,L]
 
 
 # ── COMPRESSION (Gzip) ─────────────────────────────────────
