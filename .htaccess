@@ -73,8 +73,8 @@ RewriteRule ^destinations/?$ / [R=301,L]
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # HTML - no cache (always fetch fresh from server)
-  ExpiresByType text/html                  "access plus 0 seconds"
+  # HTML - short CDN cache, revalidate on each request
+  ExpiresByType text/html                  "access plus 5 minutes"
 
   # CSS + JS - 1 year (filenames include version via ?v= or are static)
   ExpiresByType text/css                   "access plus 1 year"
@@ -106,11 +106,9 @@ RewriteRule ^destinations/?$ / [R=301,L]
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
-  # Cache-Control for HTML - no cache (always fetch fresh)
+  # Cache-Control for HTML - allow CDN edge cache, revalidate each request
   <FilesMatch "\.html$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
+    Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
 </IfModule>
 

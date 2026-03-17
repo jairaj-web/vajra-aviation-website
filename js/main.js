@@ -28,12 +28,18 @@ sub?.classList.toggle('open');
 });
 });
 const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-header?.classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
 const backTop = document.getElementById('backTop');
+let ticking = false;
 window.addEventListener('scroll', () => {
-backTop?.classList.toggle('show', window.scrollY > 400);
+if (!ticking) {
+requestAnimationFrame(() => {
+const y = window.scrollY;
+header?.classList.toggle('scrolled', y > 50);
+backTop?.classList.toggle('show', y > 400);
+ticking = false;
+});
+ticking = true;
+}
 }, { passive: true });
 backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 const animEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
