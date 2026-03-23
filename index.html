@@ -21,7 +21,8 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
   <link rel="preload" as="image" href="/images/hero-airplane2.webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="/images/hero-bg-v2.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" media="(max-width:768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/hero-bg-v2.webp" media="(min-width:769px)" fetchpriority="high" />
   <link rel="canonical" href="https://vajraaviation.com/" />
 
   <style>
@@ -71,6 +72,9 @@
     .hero-bg {
       background-image: url('images/hero-bg-v2.webp') !important;
       background-position: center 30% !important;
+    }
+    @media (max-width:768px) {
+      .hero-bg { background-image: url('images/hero-bg-mobile.webp') !important; }
     }
 
     /* ===== HERO CARD GOLD BORDER ===== */
