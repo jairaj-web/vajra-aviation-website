@@ -1,8 +1,8 @@
 # Vajra Aviation Private Limited
-> Premier aviation training institute in Bangalore, India. Founded 2013 by Ex-Indian Air Force officers. ISO 9001:2015 certified. India's only EASA-approved partner with Aviotrace Swiss.
+> Premier aviation training institute in Bangalore, India. Founded 2014 by Ex-Indian Air Force officers. ISO 9001:2015 certified. India's only EASA-approved partner with Aviotrace Swiss.
 
 ## About
-- [About Vajra Aviation](https://vajraaviation.com/about): Founded by Ex-IAF officers with 20+ years of aviation experience. ISO 9001:2015 certified institute offering DGCA-approved courses since 2013.
+- [About Vajra Aviation](https://vajraaviation.com/about): Founded by Ex-IAF officers with 20+ years of aviation experience. ISO 9001:2015 certified institute offering DGCA-approved courses since 2014.
 
 ## Courses
 - [CPL Ground School](https://vajraaviation.com/course-cpl): DGCA-approved Commercial Pilot Licence ground school in Bangalore. Covers all 7 DGCA subjects.
@@ -38,7 +38,7 @@
 - [Placements](https://vajraaviation.com/placements): Placement assistance and alumni success stories.
 
 ## Key Facts
-- Founded: 2013
+- Founded: 2014
 - Location: Bangalore, Karnataka, India
 - Certification: ISO 9001:2015
 - Regulatory approval: DGCA India
