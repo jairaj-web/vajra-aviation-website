@@ -115,7 +115,17 @@ RewriteRule ^destinations/?$ / [R=301,L]
 # ── HOTLINK PROTECTION ─────────────────────────────────────
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^https://(www\.)?vajraaviation\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?facebook\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?fbcdn\.net [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?linkedin\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?twitter\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?t\.co [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?google\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https://lh[0-9]+\.googleusercontent\.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+
+# ── DUPLICATE BLOG REDIRECT ──────────────────────────────────
+RewriteRule ^blog-easa-part-66-b1-vs-b2/?$ /blog-easa-b1-vs-b2-guide [R=301,L]
 
 # ── ERROR PAGES ────────────────────────────────────────────
 ErrorDocument 404 /404.html
