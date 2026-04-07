@@ -18,7 +18,7 @@ STANDARD_FOOTER = '''<!-- ===== FOOTER ===== -->
           <a href="https://facebook.com/vajraaviation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://instagram.com/vajraaviation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://linkedin.com/company/vajraaviation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/916364919234" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/917708100444" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div>
@@ -47,8 +47,8 @@ STANDARD_FOOTER = '''<!-- ===== FOOTER ===== -->
       </div>
       <div>
         <h4 class="footer-heading">Contact Us</h4>
-        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+916364919234">6364919234 (Admissions)</a></div>
-        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/916364919234" target="_blank">6364919234 (WhatsApp)</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+917708100444">7708100444 (Admissions)</a></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/917708100444" target="_blank">7708100444 (WhatsApp)</a></div>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919840920090">9840920090</a></div>
         <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@vajraaviation.com">info@vajraaviation.com</a></div>
         <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>NO.95, Third Floor, G R Arcade, Sector-C, Amrutha Nagar, Amruthalli, Bangalore – 560092</span></div>
