@@ -51,4 +51,4 @@
 .about-image-wrap img{height:260px;}
 }
 @media (max-width:992px){.enquiry-card{position:relative;top:auto;margin-top:28px;}}
-@media (max-width:768px){.form-control{font-size:16px;}.sidebar-course-link{min-height:44px;}.sidebar-course-link i{flex-shrink:0;}}
+@media (max-width:768px){.form-control{font-size:16px;}.sidebar-course-link{min-height:44px;}.sidebar-course-link i{flex-shrink:0;}}.cta-pulse-btn{animation:cta-pulse 2s infinite;position:relative;}.cta-pulse-btn:hover{animation:none;transform:scale(1.03);}@keyframes cta-pulse{0%,100%{box-shadow:0 4px 15px rgba(200,148,58,0.4);}50%{box-shadow:0 4px 25px rgba(200,148,58,0.75),0 0 0 8px rgba(200,148,58,0.15);}}
