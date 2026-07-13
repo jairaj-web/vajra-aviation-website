@@ -19,6 +19,7 @@ RewriteRule ^(.*)$ https://vajraaviation.com/$1 [L,R=301]
 # LiteSpeed caching handled by mod_expires and mod_headers below
 
 # ── OLD WORDPRESS URL REDIRECTS (must be before trailing slash rule) ──
+RewriteRule ^course-dgca-ame/?$ /dgca-ame-training-bangalore [R=301,L]
 RewriteRule ^easa-part-66-training-india/?$ /course-easa-part-66 [R=301,L]
 RewriteRule ^easa-part-66-j/?$ /course-easa-part-66 [R=301,L]
 RewriteRule ^graduate-engineering-training/?$ /course-graduate-engineering [R=301,L]
