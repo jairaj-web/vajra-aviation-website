@@ -35,6 +35,13 @@ RewriteRule ^tag/.*$ /blog [R=301,L]
 RewriteRule ^category/.*$ /blog [R=301,L]
 RewriteRule ^author/.*$ /about [R=301,L]
 
+# ── DUPLICATE BLOG REDIRECT (must be before .html rewrite) ──
+RewriteRule ^blog-easa-part-66-b1-vs-b2(\.html)?/?$ /blog-easa-b1-vs-b2-guide [R=301,L]
+
+# ── BLOCK INTERNAL / DEV FILES ─────────────────────────────
+RewriteRule \.(py|md|bak|toml|pkl|sh|zip)$ - [F,L,NC]
+RewriteRule (^|/)(temp_header\.txt|_redirects|README\.txt)$ - [F,L,NC]
+
 # ── CLEAN URLs (remove .html extension) ────────────────────
 # Redirect .html requests to clean URL (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+(.*?)\.html[\s?] [NC]
@@ -124,9 +131,6 @@ RewriteCond %{HTTP_REFERER} !^https://(www\.)?t\.co [NC]
 RewriteCond %{HTTP_REFERER} !^https://(www\.)?google\.com [NC]
 RewriteCond %{HTTP_REFERER} !^https://lh[0-9]+\.googleusercontent\.com [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
-
-# ── DUPLICATE BLOG REDIRECT ──────────────────────────────────
-RewriteRule ^blog-easa-part-66-b1-vs-b2/?$ /blog-easa-b1-vs-b2-guide [R=301,L]
 
 # ── ERROR PAGES ────────────────────────────────────────────
 ErrorDocument 404 /404.html
