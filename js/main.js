@@ -105,14 +105,62 @@ answer?.classList.add('open');
 });
 const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx95tU3nQEgED-sU28aBeQj1_DM9cHgXAiV7iw7xUO_jTQBEVpvefRDwTAkx1mpFBI6/exec';
 const WEB3FORMS_KEY = '65857148-d828-4d3a-a009-8aa7cf996f55';
+const HONEYPOT_FIELD = 'website_url';
+const INDIAN_MOBILE  = /^(?:\+?91|0)?[6-9]\d{9}$/;
+function showFormError(form, msg) {
+let el = form.querySelector('.form-error');
+if (!el) {
+el = document.createElement('p');
+el.className = 'form-error';
+el.style.cssText = 'color:#E74C3C;font-size:14px;margin:10px 0 0;width:100%;';
+form.appendChild(el);
+}
+el.textContent = msg;
+}
 document.querySelectorAll('.contact-form').forEach(form => {
+// Hidden honeypot: real visitors never see or fill it, bots do
+const hp = document.createElement('input');
+hp.type = 'text';
+hp.name = HONEYPOT_FIELD;
+hp.tabIndex = -1;
+hp.autocomplete = 'off';
+hp.setAttribute('aria-hidden', 'true');
+hp.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0;';
+form.appendChild(hp);
 form.addEventListener('submit', function(e) {
 e.preventDefault();
 const btn      = this.querySelector('.btn-submit');
 const original = btn.innerHTML;
+const data = new FormData(this);
+const botFilled = (data.get(HONEYPOT_FIELD) || '').trim() !== '';
+data.delete(HONEYPOT_FIELD);
+this.querySelector('.form-error')?.remove();
+if (!botFilled) {
+if (this.querySelector('[name="phone"]')) {
+const phone = (data.get('phone') || '').replace(/[\s\-()]/g, '');
+if (!INDIAN_MOBILE.test(phone)) {
+showFormError(this, 'Please enter a valid 10-digit Indian mobile number.');
+return;
+}
+data.set('phone', phone);
+}
+const name  = (data.get('name')  || '').toLowerCase();
+const email = (data.get('email') || '').toLowerCase();
+if (name.includes('vajra aviation') || email.includes('vajraaviation')) {
+showFormError(this, 'Please enter your own name and email.');
+return;
+}
+}
 btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 btn.disabled   = true;
-const data = new FormData(this);
+if (botFilled) {
+// Pretend success so bots don't retry; nothing is sent
+btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+this.reset();
+setTimeout(() => { btn.innerHTML = original; btn.disabled = false; }, 4000);
+return;
+}
+if (this.classList.contains('newsletter-form')) data.set('course', 'Newsletter');
 data.append('source', document.title);
 // 1. Google Sheets (iframe GET)
 const iframeName = 'gs_iframe_' + Date.now();
