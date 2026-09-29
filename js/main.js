@@ -106,7 +106,11 @@ answer?.classList.add('open');
 const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx95tU3nQEgED-sU28aBeQj1_DM9cHgXAiV7iw7xUO_jTQBEVpvefRDwTAkx1mpFBI6/exec';
 const WEB3FORMS_KEY = '65857148-d828-4d3a-a009-8aa7cf996f55';
 const HONEYPOT_FIELD = 'website_url';
-const INDIAN_MOBILE  = /^(?:\+?91|0)?[6-9]\d{9}$/;
+const INDIAN_MOBILE  = /^(?:\+?91|0)?([6-9]\d{9})$/;
+// Overseas numbers with country code, e.g. 971502489875 (UAE)
+const INTL_PHONE     = /^\+?[1-9]\d{10,14}$/;
+// Gmail is always @gmail.com; catch .comg / .co / gmial / gamil typos
+const EMAIL_TYPO     = /@(gmail\.(?!com$)|gmial\.|gamil\.|gmai\.|gmal\.)/;
 function showFormError(form, msg) {
 let el = form.querySelector('.form-error');
 if (!el) {
@@ -138,14 +142,22 @@ this.querySelector('.form-error')?.remove();
 if (!botFilled) {
 if (this.querySelector('[name="phone"]')) {
 const phone = (data.get('phone') || '').replace(/[\s\-()]/g, '');
-if (!INDIAN_MOBILE.test(phone)) {
-showFormError(this, 'Please enter a valid 10-digit Indian mobile number.');
+const indian = phone.match(INDIAN_MOBILE);
+if (indian) {
+data.set('phone', indian[1]);
+} else if (INTL_PHONE.test(phone) && !/^\+?91/.test(phone)) {
+data.set('phone', phone.replace('+', ''));
+} else {
+showFormError(this, 'Please enter a valid mobile number (10 digits, or with country code if outside India).');
 return;
 }
-data.set('phone', phone);
 }
 const name  = (data.get('name')  || '').toLowerCase();
-const email = (data.get('email') || '').toLowerCase();
+const email = (data.get('email') || '').trim().toLowerCase();
+if (EMAIL_TYPO.test(email)) {
+showFormError(this, 'Please check your email address, it looks mistyped (e.g. .comg instead of .com).');
+return;
+}
 if (name.includes('vajra aviation') || email.includes('vajraaviation')) {
 showFormError(this, 'Please enter your own name and email.');
 return;
