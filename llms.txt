@@ -6,6 +6,7 @@
 
 ## Courses
 - [CPL Ground School](https://vajraaviation.com/course-cpl): DGCA-approved Commercial Pilot Licence ground school in Bangalore. Covers all 7 DGCA subjects.
+- [Hybrid CPL Course](https://vajraaviation.com/course-hybrid-cpl): 6 months (750 hrs) DGCA ground training at Vajra Aviation, Bangalore, then ~12 months (200 flying hrs) at Flyola Aviation Academy. ~18 months total.
 - [ATPL Ground School](https://vajraaviation.com/course-atpl): Airline Transport Pilot Licence theory training for experienced pilots.
 - [EASA Part 66 (B1 & B2)](https://vajraaviation.com/course-easa-part-66): Only institute in India with Aviotrace Swiss EASA-approved partnership. B1.1 (mechanical) and B2 (avionics) licences.
 - [EASA Part 66 Exam Coaching Bangalore](https://vajraaviation.com/easa-exam-coaching-bangalore): Module-wise EASA B1 & B2 exam coaching in Bangalore. MCQ practice, mock tests, Ex-IAF instructors. Aviotrace Swiss partner.
@@ -46,5 +47,5 @@
 - Regulatory approval: DGCA India
 - International partnership: Aviotrace Swiss (EASA-approved, Switzerland)
 - Faculty: Ex-Indian Air Force officers
-- Courses: CPL, ATPL, EASA Part 66 B1/B2, DGCA AME, Cabin Crew, Flight Dispatcher, RT, Ground Staff, Airline Ticketing
+- Courses: CPL, Hybrid CPL (ground + flying with Flyola), ATPL, EASA Part 66 B1/B2, DGCA AME, Cabin Crew, Flight Dispatcher, RT, Ground Staff, Airline Ticketing
 - Contact: +91-6364919234 | info@vajraaviation.com
